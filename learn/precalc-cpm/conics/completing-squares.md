@@ -17,7 +17,7 @@ We will try to get it here: $y=2(x+3)^2-17$
 	* $y=2(x^2+6x)+1$
 
 3. **Add/Subtract the constant - the conceptual way**
-	* Now, we need to factor this into a perfect square. Recall that a perfect square binomail $(ax+b)^2$ --> $a^2 + 2ab + b^2$. 
+	* Now, we need to factor this into a perfect square. Recall a perfect square binomail $(ax+b)^2$ --> $a^2 + 2ab + b^2$. 
 	* You'll notice that we have the $a^2 + 2ab$ part of it, where $a=x$ and $2ab=6x$, but what about the $b^2$? Solving the second term in the trinomial for b, we get $X = 2ab$ --> $X/(2a) = b$. In this case, $6x = 2xb$ --> $3 = b$, and to get $b^2$, we get $3^2 = 9$.
 	* In math, however, we can't just come up with + 9 and be on with it, we need to balance it. One way to do this is to also subtract the same number, in this case 9. 9-9=0, and we can add 0 anywhere we want, so we get $y=2(x^2+6x+9-9)+1$
 	* Finally, we can use substitution and substitute out the perfect square, $y=2((x+3)^2-9)+1$
