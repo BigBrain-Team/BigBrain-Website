@@ -7,9 +7,12 @@
 
 ## Parameters
 $x=f(T), y=g(T)$
+
 Motion defined in the x and y directions are a function of some variable $T$ over a common domain $I$
-$T$ is the Parameter
-$I$ is the Parameter Interval 
+
+* $T$ is the Parameter
+
+* $I$ is the Parameter Interval 
 
 In other words, $I$ is an interval, so if $I=[a,b]$, then $a\le T\le b$!
 
