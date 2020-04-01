@@ -1,3 +1,4 @@
 # Files here are ignored in GitHub
 .DS_Store
 .now
+auth.js
