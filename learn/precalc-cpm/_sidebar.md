@@ -1,8 +1,8 @@
 * **Introduction**
 	* [About](/)
 * **Chapter 10 - Conic Sections**
-	* [Intro to Conic Sections](conics/intro)
-	* [Completing the Square](conics/completing-squares)
-	* [Conic Section Equations](conics/equations.md)
+	* [1. Intro to Conic Sections](conics/intro)
+	* [2. Completing the Square](conics/completing-squares)
+	* [3. Conic Section Equations](conics/equations.md)
 * **Chapter 10 - Parametrics**
-	* [Intro to Parametrics](parametrics/intro)
+	* [1. Intro to Parametrics](parametrics/intro)
