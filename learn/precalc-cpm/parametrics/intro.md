@@ -16,7 +16,8 @@ Motion defined in the x and y directions are a function of some variable $T$ ove
 
 In other words, $I$ is an interval, so if $I=[a,b]$, then $a\le T\le b$
 
-| Parameter $T$ | Point $(x, y)$ |
-| :-----------: | :------------: |
-|     $T=a$     | $(f(a), g(a))$ |
-|     $T=b$     | $(f(b),g(b))$  |
+|       Name | Parameter $T$ | Point $(x, y)$ |
+| ---------: | :-----------: | :------------: |
+|  *Initial* |     $T=a$     | $(f(a), g(a))$ |
+| *Terminal* |     $T=b$     | $(f(b),g(b))$  |
+
