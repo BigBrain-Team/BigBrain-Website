@@ -10,4 +10,5 @@ This course is meant to be traversed with others. There is a community of MHS st
 
 - Nathan Choi
 - Warren Kuang
+- Alec Machlis
 
