@@ -53,12 +53,12 @@ $y=2x^2+12x-8+4$
 * 4: *$y=2\left(x+3\right)^2-22$*
 
 #### **Problem 1 Solution**
-$y=40+x^2+14x$
-$y=x^2+14x+40$
-$y=(x^2+14x)+40$
-Our square trinomial is $(x+7)^2$/ since 14/2=7.
-From this, we also get expanded form $x^2+14x+49$, and we need to add and subtract the $49$
-$y=(x^2+14x+49-49)+40$
-$y=(x+7)^2-49+40$
-$y=(x+7)^2-9$
+* $y=40+x^2+14x$
+* $y=x^2+14x+40$
+* $y=(x^2+14x)+40$
+* Our square trinomial is $(x+7)^2$/ since 14/2=7.
+* From this, we also get expanded form $x^2+14x+49$, and we need to add and subtract the $49$
+* $y=(x^2+14x+49-49)+40$
+* $y=(x+7)^2-49+40$
+* $y=(x+7)^2-9$
 <!-- tabs:end -->
