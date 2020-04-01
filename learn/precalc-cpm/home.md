@@ -8,3 +8,4 @@ This course is meant to be traversed with others. There is a community of MHS st
 ## Authors
 **Feel free to contribute to this course (we need more). Just ask. :tada:**
 - Nathan Choi
+- Warren Kuang
