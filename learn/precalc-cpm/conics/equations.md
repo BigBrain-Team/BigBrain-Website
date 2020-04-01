@@ -51,13 +51,13 @@ Asymptote y=$\pm\frac{b}{a}\left(x-h\right)+k$
 ### Hyperbola with Transverse Axis Parrallel to the y-axis
 
 $ \frac{\left(y-k\right)^2}{a^2}-\frac{\left(x-h\right)^2}{b^2}=1 $
-Center at (h,k)
-Vertices at (h,k$\pm$a)
-Co-Vertices at (h$\pm$a,k)
-Trasnverse Axis Length = 2a
-Conjugate Axis Length = 2b
-Foci at (h,k$\pm$a)
-Asymptote y= y=$\pm\frac{a}{b}\left(x-h\right)+k$
+* Center at (h,k)
+* Vertices at (h,k$\pm$a)
+* Co-Vertices at (h$\pm$a,k)
+* Trasnverse Axis Length = 2a
+* Conjugate Axis Length = 2b
+* Foci at (h,k$\pm$a)
+* Asymptote y= y=$\pm\frac{a}{b}\left(x-h\right)+k$
 
 <img src="https://www.shelovesmath.com/wp-content/uploads/2018/12/hyperbola-vertical-larger-new-2.png" width=500>
 
