@@ -178,7 +178,7 @@ card {
 	justify-content: space-between;
 	align-items: flex-start;
 	max-width: 500px;
-	height: 250px;
+	min-height: 250px;
 	background-color: #2f3237;
 	border-radius: 25px 25px;
 	margin: 18px;
