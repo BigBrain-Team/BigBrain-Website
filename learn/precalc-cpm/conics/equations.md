@@ -45,7 +45,7 @@ $ \frac{\left(x-h\right)^2}{a^2}-\frac{\left(y-k\right)^2}{b^2}=1\ $
 
 <img src="https://textimgs.s3.amazonaws.com/boundless-algebra/gfuegnsdrlsjepiko8bz.jpe" width=500>
 
-[Hyperbola Interactive](https://www.desmos.com/calculator/jtsqq1vgie?embed ':inside :type=iframe')
+[Hyperbola Interactive](https://www.desmos.com/calculator/jtsqq1vgie?embed ':include :type=iframe')
 
 **Important Equation for Both Hyperbola Variations**
 **$c^2=a^2+b^2$**
