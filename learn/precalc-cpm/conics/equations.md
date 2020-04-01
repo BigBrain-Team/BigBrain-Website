@@ -41,7 +41,7 @@ $ \frac{\left(x-h\right)^2}{a^2}-\frac{\left(y-k\right)^2}{b^2}=1\ $
 * Transverse Axis Length = 2a
 * Conjugate Axis Length = 2b
 * Foci at (h$\pm$c,k)
-* Asymptote $y=\pm\frac{b}{a}\left(x-h\right)+k$
+* Asymptotes: $y=\pm\frac{b}{a}\left(x-h\right)+k$
 
 <img src="https://textimgs.s3.amazonaws.com/boundless-algebra/gfuegnsdrlsjepiko8bz.jpe" width=500>
 
@@ -51,19 +51,23 @@ $ \frac{\left(x-h\right)^2}{a^2}-\frac{\left(y-k\right)^2}{b^2}=1\ $
 ### Hyperbola with Transverse Axis Parrallel to the y-axis
 
 $ \frac{\left(y-k\right)^2}{a^2}-\frac{\left(x-h\right)^2}{b^2}=1 $
-* Center at (h,k)
-* Vertices at (h,k$\pm$a)
-* Co-Vertices at (h$\pm$a,k)
-* Trasnverse Axis Length = 2a
-* Conjugate Axis Length = 2b
-* Foci at (h,k$\pm$a)
-* Asymptote y= y=$\pm\frac{a}{b}\left(x-h\right)+k$
+* Center at $(h,k)$
+* Vertices at $(h,k\pma)$
+* Co-Vertices at $(h\pma,k)$
+* Trasnverse Axis Length = $2a$
+* Conjugate Axis Length = $2b$
+* Foci at $(h,k\pma)$
+* Asymptotes: $y=\pm\frac{a}{b}\left(x-h\right)+k$
 
 <img src="https://www.shelovesmath.com/wp-content/uploads/2018/12/hyperbola-vertical-larger-new-2.png" width=300>
 
 #### **Circle**
 
 ### Equation
+$(x-h)^2+(y-k)^2=r^2$
+* Center at (h,k)
+
+(Circles)[https://www.desmos.com/calculator/ilbyzbzshr?embed ":include :type=iframe"]
 
 
 #### **Ellipse**
