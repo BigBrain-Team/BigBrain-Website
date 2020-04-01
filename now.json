@@ -1,6 +1,6 @@
 {
-    "env": {
-
-        "APIKEY": "@secretapikey"
-    }
+  "env": {
+    "SECRETAPIKEY": "@secretapikey",
+    "AUTHDOMAIN": "@authdomain"
+  }
 }
