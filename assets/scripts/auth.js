@@ -10,6 +10,10 @@ function renderMe(user) {
     $("#pfp").attr("src", url);
 }
 
+function renderLearn(user) {
+    $("navbar-title").text(user.displayName);
+}
+
 
 const config = {
     apiKey: "AIzaSyC0yaoAE6qt1oEzHT4ueZZUrNFMN-3U8nE",
@@ -34,6 +38,8 @@ auth.onAuthStateChanged(function(user) {
     if (user) {
         if (document.getElementById("me")) {
             renderMe(user);
+        } else if (document.getElementById("navbar-title")) {
+            renderLearn(user);
         } else if (document.getElementById("login-form")) {
             window.location.href = "../me";
         } else {
