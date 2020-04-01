@@ -18,7 +18,7 @@ We will try to get it here: $y=2(x+3)^2-17$
 
 3. **Add/Subtract the constant - the conceptual way**
 	* Now, we need to factor this into a perfect square. Recall a perfect square binomail $(a+b)^2$ --> $a^2 + 2ab + b^2$, or you may have seen it written as $(x+a)^2$ --> $x^2 + 2ax + a^2$
-	* You'll notice that we have the $a^2 + 2ab$ part of it, where $a=x$ and $2ab=6x$, but what about the $b^2$? Solving the second term in the trinomial for b, we get $X = 2ab$ --> $X/(2a) = b$. In this case, $6x = 2xb$ --> $3 = b$, and to get $b^2$, we get $3^2 = 9$.
+	* You'll notice that we have the $a^2 + 2ab$ part of it, where $a=x$ and $2ab=6x$, but what about the $b^2$? Solving the second term in the trinomial for b, we get $X = 2ab$ --> $X/(2a) = b$. In this case, $6x = 2xb$ --> $3 = b$ (aka $1/2$ of the $ax$ part), and to get $b^2$, we get $3^2 = 9$.
 	* In math, however, we can't just come up with + 9 and be on with it, we need to balance it. One way to do this is to also subtract the same number, in this case $9$. #9-9=0#, and we can add $0$ anywhere we want, so we get $y=2(x^2+6x+9-9)+1$
 	* Finally, we can use substitution and substitute out the perfect square, $y=2((x+3)^2-9)+1$
 4. **Add/Subtract the constant - the formula way**
@@ -35,19 +35,30 @@ We will try to get it here: $y=2(x+3)^2-17$
 <!-- tabs:start -->
 
 #### **Problem 1**
-$y=49+x^2+14x$
-* *$y=(x+7)^2$*
+$y=40+x^2+14x$
 
 #### **Problem 2**
 $y=x^2+6x+1$
-* *$y=(x+3)^2-8$*
 
 #### **Problem 3**
 $y=3x^2+2x-3+4$
-* *$y=3\left(x+\frac{1}{3}\right)^2+\frac{2}{3}$*
 
 #### **Problem 4**
 $y=2x^2+12x-8+4$
-* *$y=2\left(x+3\right)^2-22$*
 
+#### **Answer key**
+* 1: *$y=(x+7)^2-9$*
+* 2: *$y=(x+3)^2-8$*
+* 3: *$y=3\left(x+\frac{1}{3}\right)^2+\frac{2}{3}$*
+* 4: *$y=2\left(x+3\right)^2-22$*
+
+#### **Problem 1 Solution**
+* $y=40+x^2+14x$
+* $y=x^2+14x+40$
+* $y=(x^2+14x)+40$
+* Our square trinomial is $(x+7)^2$, since $14/2=7$.
+* From this, we also get expanded form $x^2+14x+49$, and we need to add and subtract the $49$
+* $y=(x^2+14x+49-49)+40$
+* $y=(x+7)^2-49+40$
+* $y=(x+7)^2-9$
 <!-- tabs:end -->
