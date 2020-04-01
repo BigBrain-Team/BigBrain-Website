@@ -2,6 +2,8 @@
 We are finally here! 
 Not too many equations actually.
 
+!> ***These are just the plain equations. You do not need to memorize these right off the bat, but you will need to have a feel for these equations and eventually memorize them.
+
 ## Equations
 <!-- tabs:start -->
 #### **Parabola**
@@ -22,11 +24,13 @@ $$
 y=\frac{1}{4c}\left(x-h\right)^2+k
 $$
 
-**If the parabola is horizontal**
+**If the parabola is horizontal** AKA "Sleeping parabola"
 
 $$
 x=\frac{1}{4c}\left(y-k\right)^2+h
 $$
+
+
 
 #### **Hyperbola**
 
