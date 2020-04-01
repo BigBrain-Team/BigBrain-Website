@@ -2,7 +2,7 @@
 We are finally here! 
 Not too many equations actually.
 
-!> ***These are just the plain equations. You do not need to memorize these right off the bat, but you will need to have a feel for these equations and eventually memorize them.
+!> ***These are just the plain equations. You do not need to memorize these right off the bat, but you will need to have a feel for these equations and eventually memorize them.***
 
 ## Equations
 <!-- tabs:start -->
