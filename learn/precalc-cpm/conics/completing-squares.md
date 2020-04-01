@@ -1,6 +1,5 @@
 # Completing the Square
-*If you already know how to do this **efficiently**, you may skip.*
-
+*If you already know how to do this **efficiently**, you may skip.* Do note that you need to understand what perfect square trinomials are ($a^2+2ab+b^2).
 ## Basic-How-To
 **Goal:** You are tring to turn a trinomial into a completed square.
 
