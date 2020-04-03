@@ -33,7 +33,7 @@ firebase.initializeApp(config);
 firebase.analytics();
 const auth = firebase.auth();
 
-auth.onAuthStateChanged(function(user) {
+auth.onAuthStateChanged((user) => {
     // If user is logged in
     if (user) {
         if (document.getElementById("me")) {
@@ -64,7 +64,7 @@ if (loginForm) {
         const password = loginForm["pswd"].value;
 
         auth.signInWithEmailAndPassword(email, password)
-            .catch(function(error) {
+            .catch((error) => {
                 console.log(error);
                 let errorMsg = error.message;
                 const code = error.code;
@@ -90,17 +90,17 @@ if (signupForm) {
         const name = signupForm["name"].value;
 
         auth.createUserWithEmailAndPassword(email, password)
-            .then(function() {
+            .then(() => {
                 auth.currentUser.updateProfile({
                     displayName: name
-                }).then(function() {
+                }).then(() => {
                     window.location.href = "/me";
-                }).catch(function(error) {
+                }).catch((error) => {
                     $("#log").text(error.message);
                     alert(error);
                 })
             })
-            .catch(function(error) {
+            .catch((error) => {
                 console.log(error)
                 $("#log").text(error.message);
             })
@@ -110,7 +110,7 @@ if (signupForm) {
 
 const logoutBtn = document.querySelector("#logout");
 if (logoutBtn) {
-    logout.addEventListener("click", function() {
+    logout.addEventListener("click", () => {
         auth.signOut().then(() => {
             console.log("Signed Out!");
             window.location.href = "/";
@@ -128,12 +128,12 @@ if (nameChange) {
         if (newName != "") {
             auth.currentUser.updateProfile({
                 displayName: newName
-            }).then(function() {
+            }).then(() => {
                 console.log("Name changed success!");
                 renderMe(auth.currentUser);
                 nameChange.reset();
                 window.location.href = "#home";
-            }).catch(function(error) {
+            }).catch((error) => {
                 $("#namechange-log").text(error.message);
             })
         }
@@ -152,13 +152,36 @@ if (pfpChange) {
 
         auth.currentUser.updateProfile({
             photoURL: newUrl
-        }).then(function() {
+        }).then(() => {
             console.log("Photo changed success!");
             renderMe(auth.currentUser);
             pfpChange.reset();
             window.location.href = "#home";
-        }).catch(function(error) {
+        }).catch((error) => {
             $("#photochange-log").text(error.message);
         })
+    });
+}
+
+const deleteAccount = document.querySelector("#delete-account");
+if (deleteAccount) {
+    deleteAccount.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const password = deleteAccount["delete-field"].value;
+        auth.signInWithEmailAndPassword(auth.currentUser.email, password)
+            .then(() => {
+                auth.currentUser.delete()
+                    .catch((error) => {
+                        $("#delete-log").text(error.code);
+                    });
+            })
+            .catch((error) => {
+                if (error.code == "auth/wrong-password") {
+                    $("delete-label").text("Incorrect password.");
+                } else {
+                    alert(error);
+                }
+            });
     });
 }
