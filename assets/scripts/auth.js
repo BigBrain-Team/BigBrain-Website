@@ -11,7 +11,7 @@ function renderMe(user) {
 }
 
 function renderLearn(user) {
-    $("navbar-title").text(user.displayName);
+    $("#navbar-title").text(user.displayName);
 }
 
 
@@ -126,16 +126,20 @@ if (nameChange) {
         const newName = nameChange["newname-field"].value;
 
         if (newName != "") {
-            auth.currentUser.updateProfile({
-                displayName: newName
-            }).then(() => {
-                console.log("Name changed success!");
-                renderMe(auth.currentUser);
-                nameChange.reset();
-                window.location.href = "#home";
-            }).catch((error) => {
-                $("#namechange-log").text(error.message);
-            })
+            if (newName.length >= 3) {
+                auth.currentUser.updateProfile({
+                    displayName: newName
+                }).then(() => {
+                    console.log("Name changed success!");
+                    renderMe(auth.currentUser);
+                    nameChange.reset();
+                    window.location.href = "#home";
+                }).catch((error) => {
+                    $("#namechange-log").text(error.message);
+                });
+            } else {
+                $("#namechange-log").text("At least three charachters.");
+            }
         }
     });
 }
