@@ -395,6 +395,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 	border: 1px solid #eee;
 	width: 1px;
 	min-width: 100%
+	min-height: 70vh;
 }
 
 .markdown-section table {
