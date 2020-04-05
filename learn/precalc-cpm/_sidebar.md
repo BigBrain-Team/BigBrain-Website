@@ -6,3 +6,4 @@
 	* [3. Conic Section Equations](conics/equations.md)
 * **Chapter 10 - Parametrics**
 	* [1. Intro to Parametrics](parametrics/intro)
+	* [2. Parametrics With Trigonometry](parametrics/parametrics-trig)
