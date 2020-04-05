@@ -4,7 +4,7 @@
 
 When given parametric equations that include trigonometric functions $(sin, cos, tan, csc, sec, cot)$, **eliminate the parameters with trigonometric identities.** 
 
-<img src="http://1.bp.blogspot.com/-BgRyWXqeWvs/VQBWy4Z2auI/AAAAAAAAFZE/e4wfD6R7VrU/s1600/Trig%2BIdentities.JPG)" width=500>
+<img src="/learn/precalc-cpm/media/trig-id.JPG" width=500>
 
 ## Example #1
 
