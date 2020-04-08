@@ -2,7 +2,7 @@
 ## The New System
 Remember graphing with $(x,y)$ on **cartesian graphs**? Those are called **rectangular coordinates**.
 
-<img src="chapter-11/media/carte.jpg" width="200">
+<img src="/learn/precalc-cpm/chapter-11/media/carte.jpg" width="200">
 
 *Cartesian Graph*
 
@@ -11,7 +11,7 @@ They are represented as $(r, \theta)$.
 
 ?> **Important:** always stick with <u>radians.</u>
 
-<img src="chapter-11/media/polar.gif" width="400">
+<img src="/learn/precalc-cpm/chapter-11/media/polar.gif" width="400">
 
 Above is a **polar coordinate** on a cartesian graph.
 
@@ -52,7 +52,7 @@ $\theta =\tan ^{-1}\left(\frac{y}{x}\right)$
 Hopefully the equations all looked familar. They are all used to solve the sides and angles of right triangles! Take a look at a polar coordinate. 
 We can draw a right traingle from the **pole**, **polar point**, and a point from the **radius axis**.
 
-<img src="chapter-11/media/polar-tri.png" width="500">
+<img src="/learn/precalc-cpm/chapter-11/media/polar-tri.png" width="500">
 
 #### Polar > Rectangular
 We use some basic trig functions, $sin$ and $cos$, to find the adjacent and opposite sides of the triangle.
