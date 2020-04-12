@@ -18,6 +18,7 @@ Above is a **polar coordinate** on a cartesian graph.
 ### Basic Terms
 * **pole** - center of the plane. *(origin of the polar graph)*
 * **r** - distance the **pole**
+* **polar axis** - axis which the radius is measured with. Sometimes refered as the *radius axis*.
 * $\theta$ - angle (look at reference above)
 
 ## Graphing Polar Coordinates
@@ -50,7 +51,7 @@ $\theta =\tan ^{-1}\left(\frac{y}{x}\right)$
 
 #### **Explanation**
 Hopefully the equations all looked familar. They are all used to solve the sides and angles of right triangles! Take a look at a polar coordinate. 
-We can draw a right traingle from the **pole**, **polar point**, and a point from the **radius axis**.
+We can draw a right traingle from the **pole**, **polar point**, and a point from the **polar axis**.
 
 <img src="/learn/precalc-cpm/chapter-11/media/polar-tri.png" width="500">
 
