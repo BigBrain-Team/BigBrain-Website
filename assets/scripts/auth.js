@@ -12,6 +12,9 @@ function renderMe(user) {
         url = "https://www.searchpng.com/wp-content/uploads/2019/02/Men-Profile-Image-715x657.png";
     }
     $("#pfp").attr("src", url);
+
+    $("#newname-field").attr("placeholder", user.displayName);
+    $("#photourl-field").attr("placeholder", "default");
 }
 
 // Addresses UI in all course pages
