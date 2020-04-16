@@ -26,6 +26,15 @@ h1 {
 	font-size: 50px;
 }
 
+hr {
+	text-align: center;
+	color: #EDEFEF;
+	width: 100%;
+	opacity: 0.5;
+	height: 1px;
+	border: none;
+}
+
 button {
 	cursor: pointer;
 	font-family: "Work Sans";
@@ -151,18 +160,21 @@ section h1 {
 
 /* FOOTER */
 .footer {
+	align-items: center;
 	min-height: 30vh;
 	overflow: hidden;
 }
 
-.footer .footer-body .col *{
-	flex-grow: 1;
+.footer *{
 	justify-content: flex-start;
 	text-align: left;
 }
 
 .footer .col {
+	display: inline-flex;
 	flex-shrink: 1;
+	flex-grow: 1;
+	justify-content: space-around;
 }
 
 .footer p {
@@ -174,24 +186,35 @@ section h1 {
 	color: #FFC849;
 }
 
+.footer i {
+	padding: 5px;
+}
+
+.footer a {
+	transition: opacity 0.3s ease-in-out;
+}
+
+.footer a:hover {
+	opacity: 0.5;
+}
+
 .footer .footer-body {
 	display: flex;
-	width: 100%;
 	flex-grow: 1;
 	flex-shrink: 1;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	width: 80%;
 }
 
 .footer .copyright {
 	text-align: center;
 	display: block;
-	width: 100%;
 	padding: 2vh;
 	color: inherit;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 	.footer p {font-size: 4vw;}
 	.footer h1 {font-size: 10vw;}
 	.footer h2 {font-size: 6vw;}
@@ -205,8 +228,8 @@ section h1 {
 		margin-bottom: 2vh;
 	}
 
-	.footer .footer-body .col * {
-		text-align: center;
+	.footer * {
+		text-align: center !important;
 	}
 }
 
@@ -296,4 +319,12 @@ card form {
 
 .green {
 	color: #3BAA54 !important;
+}
+
+.white {
+	color: white !important;
+}
+
+.gray {
+	color: gray !important;
 }

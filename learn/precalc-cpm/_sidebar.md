@@ -12,5 +12,7 @@
 	* *Polar Functions*
 		* [1. Intro to the Polar Graph](chapter-11/polar-fx/intro)
 		* [2. Converting Polar Coordinates](chapter-11/polar-fx/converting)
+		* [3. Polar Functions](chapter-11/polar-fx/functions)
+		* [4. Converting Polar Functions](chapter-11/polar-fx/converting-functions)
 	* *Complex Numbers*
 		* [1. Complex Numbers Review](chapter-11/complex-nums/review)
