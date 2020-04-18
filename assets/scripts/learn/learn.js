@@ -1,4 +1,4 @@
-console.log("Looking under the hood?");
+console.log("Looking under the hood? Reach us on discord to help!");
 
 // Initial Setup
 window.$docsify = {
@@ -22,11 +22,19 @@ window.$docsify = {
 }
 
 //=====// Finsihed Status //=====//
+var finishedLessonsLocal = [];
 
-var finishedCourses = [];
+// Gets course id
+function getCourseID() {
+    const location = window.location.href;
+    const start = location.indexOf("/learn/") + 7;
+    const hashtag = location.indexOf("/#");
+
+    return location.substring(start, hashtag);
+}
 
 // Gets the course identification (url)
-function getCourse() {
+function getLessonURL() {
     const location = window.location.href;
     const hashtag = location.indexOf("#");
     const question = location.indexOf("?");
@@ -45,19 +53,30 @@ function getLessonSidebar(lesson) {
 
 // Button onclick function
 function mark(finished) {
-    const current = getCourse();
+    const current = getLessonURL();
+    const user = auth.currentUser;
+    const courseData = db.collection("users").doc(user.uid)
+        .collection("courseData").doc(getCourseID());
 
     if (finished) {
-        if (!finishedCourses.includes(current)) {
-            finishedCourses.push(current);
-            finishedCourses.forEach(finishLesson);
+        if (!finishedLessonsLocal.includes(current)) {
+            finishedLessonsLocal.push(current);
+            finishedLessonsLocal.forEach(finishLesson);
         }
     } else {
-        finishedCourses = finishedCourses.filter(lesson => lesson != current);
+        finishedLessonsLocal = finishedLessonsLocal.filter(lesson => lesson != current);
         unfinishLesson(current);
     }
 
-
+    courseData.update({
+        finishedLessons: finishedLessonsLocal
+    })
+    .then(function() {
+        console.log("Success");
+    })
+    .catch(function(error) {
+        alert(error);
+    })
 }
 
 // Adds checkmark to a lesson
@@ -71,15 +90,14 @@ function finishLesson(lesson) {
 
 function unfinishLesson(lesson) {
     const txt = getLessonSidebar(lesson).text();
-
     getLessonSidebar(lesson).text(txt.replace("✅ ", ""));
 }
 
 // Added button to every lesson
 function install(hook) {
     var button = `
-        <button onclick="mark(true)">Mark As Finished</button>
-        <button onclick="mark(false)" class="gray">Mark As Unfinished</button>
+        <button id="fin">Mark As Finished</button>
+        <button id="unfin" class="gray">Mark As Unfinished</button>
     `;
 
     hook.afterEach(function(html, next) {
@@ -87,7 +105,16 @@ function install(hook) {
     });
 
     hook.doneEach(function() {
-        finishedCourses.forEach(finishLesson);
+        finishedLessonsLocal.forEach(finishLesson);
+
+        const finButton = document.querySelector("#fin");
+        const unfinButton = document.querySelector("#unfin");
+        finButton.addEventListener("click", () => {
+            mark(true);
+        });
+        unfinButton.addEventListener("click", () => {
+            mark(false);
+        })
     })
 }
 
