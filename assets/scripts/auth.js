@@ -55,10 +55,14 @@ auth.onAuthStateChanged((user) => {
             $("#nav-btn").parent().parent().attr("href", "/me");
             $("#nav-btn").text("Account");
         }
-    } 
+    }
     // If no user is logged in
     else {
-        if (document.getElementById("me") || document.getElementById("app-config")) {
+        if (document.getElementById("me")) {
+            window.location.href = "/login";
+        }
+
+        if (document.getElementById("app")) {
             window.location.href = "/login";
         }
     }
