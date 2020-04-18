@@ -8,12 +8,12 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="/assets/styles/learn.css">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous" defer></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js" defer></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js" defer></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js" defer></script>
-		<script src="/assets/scripts/auth.js" defer></script>
-		<script src="/assets/scripts/learn/learn.js" defer></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+		<script src="/assets/scripts/auth.js"></script>
 		<style type="text/css">
 			#navbar-title a {
 				text-decoration: none;
@@ -30,27 +30,7 @@
 	</head>
 	<body>
 		<div id="app">Asking Ms. Loi for classwork~</div>
-		<script id="app-config" defer>
-			window.$docsify = {
-				name: '<a id="navbar-title" href="/me">Me</a>',
-				homepage: "home.md",
-				loadSidebar: true,
-				subMaxLevel: 2,
-				alias: {
-					'.*/_sidebar.md': '/_sidebar.md'
-				},
-				tabs: {
-					persist: true,
-					sync: false
-				},
-				pagination: {
-					previousText: 'Previous Lesson',
-					nextText: 'Next Lesson',
-					crossChapter: true,
-					crossChapterText: true,
-				}
-			}
-		</script>
+		<script src="/assets/scripts/learn/learn.js"></script>
 		<script src="//unpkg.com/docsify@4.7.0/lib/docsify.js"></script>
 		<!-- DOCSIFY LIBRARIES -->
 		<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>

@@ -12,11 +12,34 @@ function renderMe(user) {
         url = "https://www.searchpng.com/wp-content/uploads/2019/02/Men-Profile-Image-715x657.png";
     }
     $("#pfp").attr("src", url);
+
+    $("#newname-field").attr("placeholder", user.displayName);
+    $("#photourl-field").attr("placeholder", "default");
 }
 
 // Addresses UI in all course pages
 function renderLearn(user) {
     $("#navbar-title").text(user.displayName);
+
+    const courseData = db.collection("users").doc(user.uid)
+        .collection("courseData").doc(getCourseID());
+
+    courseData.get().then(function(doc) {
+        if (doc.exists) {
+            finishedLessonsLocal = doc.data()["finishedLessons"];
+            finishedLessonsLocal.forEach(finishLesson);
+        } else {
+            console.log("Creating database for user...");
+            courseData.set({
+                finishedLessons: []
+            })
+            .then(function() {
+                console.log("Creation success!");
+            });
+        }
+    }).catch(function(error) {
+        alert("Error: " + error);
+    });
 }
 
 const config = {
@@ -36,6 +59,7 @@ firebase.initializeApp(config);
 firebase.analytics();
 // Creating an auth object to save code
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 // Executes when user state changes
 auth.onAuthStateChanged((user) => {
@@ -52,10 +76,14 @@ auth.onAuthStateChanged((user) => {
             $("#nav-btn").parent().parent().attr("href", "/me");
             $("#nav-btn").text("Account");
         }
-    } 
+    }
     // If no user is logged in
     else {
-        if (document.getElementById("me") || document.getElementById("app-config")) {
+        if (document.getElementById("me")) {
+            window.location.href = "/login";
+        }
+
+        if (document.getElementById("app") || document.querySelector("main")) {
             window.location.href = "/login";
         }
     }
