@@ -28,10 +28,15 @@ var finishedLessonsLocal = [];
 function getCourseID() {
     const location = window.location.href;
     const start = location.indexOf("/learn/") + 7;
-    const hashtag = location.indexOf("/#");
+    const hashtag = location.indexOf("/#/");
+    const hashtag2 = location.indexOf("#/");
 
-    return location.substring(start, hashtag);
+    if (hashtag != -1) {
+        return location.substring(start, hashtag);
+    }
+    return location.substring(start, hashtag2);
 }
+    
 
 // Gets the course identification (url)
 function getLessonURL() {
