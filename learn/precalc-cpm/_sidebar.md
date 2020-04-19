@@ -9,10 +9,10 @@
 		* [1. Intro to Parametrics](chapter-10/parametrics/intro)
 		* [2. Parametrics With Trigonometry](chapter-10/parametrics/parametrics-trig)
 * **Chapter 11 - Polar Graphs**
-	* *Polar Functions*
-		* [1. Intro to the Polar Graph](chapter-11/polar-fx/intro)
-		* [2. Converting Polar Coordinates](chapter-11/polar-fx/converting)
-		* [3. Polar Functions](chapter-11/polar-fx/functions)
-		* [4. Converting Polar Functions](chapter-11/polar-fx/converting-functions)
+	* *Polar Equations*
+		* [1. Intro to the Polar Graph](chapter-11/polar/intro)
+		* [2. Converting Polar Coordinates](chapter-11/polar/converting)
+		* [3. Polar Equations](chapter-11/polar/equations)
+		* [4. Converting Polar Equations](chapter-11/polar/converting-equations)
 	* *Complex Numbers*
 		* [1. Complex Numbers Review](chapter-11/complex-nums/review)

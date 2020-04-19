@@ -125,13 +125,13 @@ $\frac{\left(x-h\right)^2}{a^2}+\frac{\left(y-k\right)^2}{b^2}=1$
 ## Interactive Graphs
 <!-- tabs:start -->
 #### **Parabola**
-[Parabola Interactive](https://www.desmos.com/calculator/m9slldsxy2?embed ':include :type=iframe')
+<iframe src="https://www.desmos.com/calculator/m9slldsxy2?embed"></iframe>
 #### **Hyperbola**
-[Hyperbola Interactive](https://www.desmos.com/calculator/jtsqq1vgie?embed ':include :type=iframe')
+<iframe src="https://www.desmos.com/calculator/jtsqq1vgie?embed"></iframe>
 #### **Circle**
-[Circles Interactive](https://www.desmos.com/calculator/3aeg1nildo?embed ':include :type=iframe')
+<iframe src="https://www.desmos.com/calculator/3aeg1nildo?embed"></iframe>
 #### **Ellipse**
-[Ellipse Interactive](https://www.desmos.com/calculator/7ubtuwp4p5?embed ':include :type=iframe')
+<iframe src="https://www.desmos.com/calculator/7ubtuwp4p5?embed"></iframe>
 
 
 <!-- tabs:end -->
