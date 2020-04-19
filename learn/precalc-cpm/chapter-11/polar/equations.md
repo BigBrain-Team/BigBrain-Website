@@ -35,12 +35,12 @@ $r=a$ is a circle with center at origin and radius $a$
 <iframe src="https://www.desmos.com/calculator/rmnipmsy7v?embed" style="height: 250px"></iframe> 
 
 #### Case #2
-$r=a\cos{\theta}$ is a circle where the center is $(0, \frac{a}{2})$ and radius is $\frac{a}{2}$.
+$r=a\cos{\theta}$ is a circle where the center is $(\frac{a}{2}, 0)$ and radius is $\frac{a}{2}$.
 
 <iframe src="https://www.desmos.com/calculator/aiglvyoj2e?embed" style="height: 250px"></iframe> 
 
 #### Case #3
-$r=a\sin{\theta}$ is a circle where the center is $(\frac{a}{2}, 0)$ and radius is $\frac{a}{2}$.
+$r=a\sin{\theta}$ is a circle where the center is $(0, \frac{a}{2})$ and radius is $\frac{a}{2}$.
 
 <iframe src="https://www.desmos.com/calculator/bgc3brut91?embed" style="height: 250px"></iframe> 
 
