@@ -1,5 +1,33 @@
 console.log("Looking under the hood? Reach us on discord to help!");
 
+// Toggles (<details>)
+if (window.localStorage.getItem("toggledOnSaved") == null) {
+    console.log("Creating local save: toggled.");
+    window.localStorage.setItem("toggledOnSaved", []);
+}
+
+function saveToggleStates() {
+    let tempToggledOn = [];
+    $(".sidebar-nav").find("details").filter("[open]").each(function(i) {
+        tempToggledOn[i] = $(this).children("summary").text() + getCourseID();
+    });
+
+    const hasActiveLesson = $(".sidebar-nav .active").parents().eq(1);
+    tempToggledOn.push(hasActiveLesson.children("summary").text() + getCourseID());
+
+    window.localStorage.setItem("toggledOnSaved", tempToggledOn);
+}
+
+function restoreToggleStates() {
+    let storedToggledOn = window.localStorage.getItem("toggledOnSaved");
+    $(".sidebar-nav").find("details")
+        .each(function(i) {
+            if (storedToggledOn.includes($(this).children("summary").text() + getCourseID())) {
+                $(this).attr("open", "");
+            }
+        })
+}
+
 // Initial Setup
 window.$docsify = {
     name: '<a id="navbar-title" href="/me">Me</a>',
@@ -36,7 +64,7 @@ function getCourseID() {
     }
     return location.substring(start, hashtag2);
 }
-    
+
 
 // Gets the course identification (url)
 function getLessonURL() {
@@ -74,14 +102,11 @@ function mark(finished) {
     }
 
     courseData.update({
-        finishedLessons: finishedLessonsLocal
-    })
-    .then(function() {
-        console.log("Success");
-    })
-    .catch(function(error) {
-        alert(error);
-    })
+            finishedLessons: finishedLessonsLocal
+        })
+        .catch(function(error) {
+            alert(error);
+        })
 }
 
 // Adds checkmark to a lesson
@@ -111,6 +136,7 @@ function install(hook) {
 
     hook.doneEach(function() {
         finishedLessonsLocal.forEach(finishLesson);
+        restoreToggleStates();
 
         const finButton = document.querySelector("#fin");
         const unfinButton = document.querySelector("#unfin");
@@ -119,8 +145,12 @@ function install(hook) {
         });
         unfinButton.addEventListener("click", () => {
             mark(false);
-        })
-    })
+        });
+
+        $(".sidebar-nav").find("details").click(function() {
+            setTimeout(saveToggleStates);
+        });
+    });
 }
 
 window.$docsify = window.$docsify || {};

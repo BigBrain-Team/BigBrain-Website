@@ -1,3 +1,4 @@
+@4.19.20 Authors: *Nathan Choi*
 # Introduction to Polar Functions
 ## The New System
 Remember graphing with $(x,y)$ on **cartesian graphs**? Those are called **rectangular coordinates**.

@@ -2,6 +2,7 @@
 
 <hr>
 
+@4.19.20 Authors: *Nathan Choi*
 # Converting to Rectangular Coordinates and Back
 Polar coordinate can be represented by a rectangular coordinate and vice versa.
 Let's say we have the polar coordinate represented as $(r, \theta)$ and the rectangular coordinate as $(x, y)$

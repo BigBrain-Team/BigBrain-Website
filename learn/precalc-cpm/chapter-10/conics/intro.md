@@ -1,3 +1,4 @@
+@4.19.20 Authors: *Nathan Choi*
 # Intro to Conic Sections
 ## What's a conic?
 A **conic section** is the intersection of a plane and a cone (or two cones)

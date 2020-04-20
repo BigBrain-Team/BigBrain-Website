@@ -1,3 +1,4 @@
+@4.19.20 Authors: *Warren Kuang*
 # Conic Section Equations
 We are finally here! 
 Not too many equations actually.
