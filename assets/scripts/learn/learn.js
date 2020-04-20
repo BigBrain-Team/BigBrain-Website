@@ -6,11 +6,6 @@ if (window.localStorage.getItem("toggledOnSaved") == null) {
     window.localStorage.setItem("toggledOnSaved", []);
 }
 
-if (window.localStorage.getItem("lastActiveSaved") == null) {
-    console.log("Creating local save: active.");
-    window.localStorage.setItem("lastActiveSaved", []);
-}
-
 function getLocalActive() {
     const hasActiveLesson = $(".sidebar-nav .active").parents().eq(1);
     return hasActiveLesson.children("summary").text() + getCourseID();
@@ -26,7 +21,6 @@ function saveToggleStates() {
         tempToggledOn[i] = getDetailID($(this));
     });
 
-    window.localStorage.setItem("lastActiveSaved", getLocalActive());
     window.localStorage.setItem("toggledOnSaved", tempToggledOn);
 }
 
@@ -38,10 +32,8 @@ function restoreToggleStates() {
                 $(this).attr("open", "");
             }
         });
-    let lastActive = window.localStorage.getItem("lastActiveSaved");
-    if (lastActive == getLocalActive()) {
-        $(".sidebar-nav .active").parents().eq(1).attr("open", "");
-    }
+
+    $(".sidebar-nav .active").parents().eq(1).attr("open", "");
 }
 
 // Initial Setup
