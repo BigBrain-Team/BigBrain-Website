@@ -42,6 +42,7 @@ window.$docsify = {
     homepage: "home.md",
     loadSidebar: true,
     subMaxLevel: 2,
+    auto2top: true,
     alias: {
         '.*/_sidebar.md': '/_sidebar.md'
     },
