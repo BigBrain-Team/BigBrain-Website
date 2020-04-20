@@ -16,10 +16,6 @@ function getLocalActive() {
     return hasActiveLesson.children("summary").text() + getCourseID();
 }
 
-function turnOn() {
-
-}
-
 function getDetailID(detail) {
     return detail.children("summary").text() + getCourseID();
 }
