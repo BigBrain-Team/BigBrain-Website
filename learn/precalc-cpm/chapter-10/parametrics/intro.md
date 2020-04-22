@@ -1,4 +1,5 @@
-## Parametric Equations
+@4.19.20 Authors: *Warren Kuang*
+# Parametric Equations
 ### Problems with Plane Curves With Only (x,y) 
 
 1. Many plane curves are not functions

@@ -1,5 +1,5 @@
+@4.19.20 Authors: *Warren Kuang, Nathan Choi*
 # Parametric Equations with Trigonometry
-
 ## Solving Strategy
 
 When given parametric equations that include trigonometric functions $(sin, cos, tan, csc, sec, cot)$, **eliminate the parameters with trigonometric identities.** 
