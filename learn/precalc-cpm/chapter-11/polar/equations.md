@@ -1,13 +1,9 @@
-<iframe class="video" src="https://www.youtube-nocookie.com/embed/flTz_pSzVFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<hr>
-
-@4.19.20 Authors: *Nathan Choi*
+@4.21.20 Authors: *Nathan Choi*
 
 # Polar Equations
 ## Terms
-**Rectangular Equations** - equations that describe the relationship between $x$ and $y$.
-
-**Polar Equations** - equations that describe the relationship between $r$ and $\theta$.
+- **Rectangular Equations** - equations that describe the relationship between $x$ and $y$.
+- **Polar Equations** - equations that describe the relationship between $r$ and $\theta$.
 
 ## Graphs
 Polar equations are tedious to graph, so we must memorize some *special cases*.

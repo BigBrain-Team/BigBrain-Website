@@ -33,6 +33,10 @@ div#app:empty:before {
 	content: "Loading..."
 }
 
+.content p {
+	line-height: 2em !important;
+}
+
 .emoji {
 	height: 1.2rem;
 	vertical-align: middle
@@ -67,11 +71,12 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	color: #34495e;
-	font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
-	font-size: 15px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 1em;
 	letter-spacing: 0;
 	margin: 0;
 	overflow-x: hidden
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 #fin, #unfin {
@@ -388,6 +393,8 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 }
 
 .content {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 	padding-top: 60px;
 	position: absolute;
 	top: 0;
@@ -395,6 +402,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 	bottom: 0;
 	left: 300px;
 	transition: left .25s ease;
+	font-size: 18px;
 }
 
 .markdown-section {
@@ -466,7 +474,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 	border-radius: 100%;
 	color: #fff;
 	content: "!";
-	font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	left: -12px;
@@ -983,12 +991,20 @@ pre:after {
 	top: 0
 }
 
+details {
+	cursor: pointer;
+}
+
 :root {
 	--theme-color: #FFC849;
 }
 
 .medium-zoom-image--opened, .medium-zoom-overlay {
 	z-index: 31;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+	opacity: 0.95 !important;
 }
 
 .docsify-tabs__tab {
