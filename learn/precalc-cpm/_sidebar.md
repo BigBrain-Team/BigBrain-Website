@@ -35,6 +35,7 @@
 		<summary>Complex Numbers Review</summary>
 		
 		* [1. Complex Numbers Review](chapter-11/complex-nums/review)
+		* [2. Complex Numbers in Polar Form](chapter-11/complex-nums/polar-form)
 
 	</details>
 		
