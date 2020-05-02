@@ -102,14 +102,14 @@ section h1 {
 	height: 100%;
 }
 
-.jumbotron .img {
-	display: inline-block;
+.img {
+	display: block;
 	width: 80vw;
 	max-width: 500px;
 	margin: 1em;
 }
 
-.jumbotron .img img {
+.img img {
 	text-align: center;
 	width: 100%;
 }
@@ -254,7 +254,7 @@ section h1 {
 
 .cards-container {
 	display: flex;
-	flex-grow: 1;
+	flex-grow: 2;
 	align-items: center;
 	justify-content: center;
 }
@@ -327,4 +327,8 @@ card form {
 
 .gray {
 	color: gray !important;
+}
+
+.gold {
+	color: #FFC849 !important;
 }

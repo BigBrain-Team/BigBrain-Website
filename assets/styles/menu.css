@@ -88,7 +88,7 @@
  */
 #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(-1px, -2px);
     background: #FFC849;
 }
 
@@ -104,7 +104,7 @@
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(1px, 0px);
 }
 
 /*

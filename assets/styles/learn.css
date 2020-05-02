@@ -1,3 +1,6 @@
+/* Original CSS by Docsify.js */
+/* Modified by Nathan Choi (b0kch01) */
+
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
 
 #main {
@@ -281,7 +284,9 @@ main.hidden {
 	left: 0;
 	transition: transform .25s ease-out;
 	width: 300px;
-	z-index: 20
+	z-index: 20;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
 }
 
 .sidebar>h1 {
@@ -370,7 +375,8 @@ main.hidden {
 }
 
 .sidebar-toggle:hover .sidebar-toggle-button {
-	opacity: .4;
+	transform: scale(0.98);
+	opacity: 0.8;
 }
 
 @media (hover: none) {
@@ -403,6 +409,8 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 	left: 300px;
 	transition: left .25s ease;
 	font-size: 18px;
+	transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
 }
 
 .markdown-section {
@@ -1011,7 +1019,7 @@ details {
 	cursor: pointer;
 }
 
-#menuToggle span {
+.sidebar-toggle-button span {
     display: block;
     width: 33px;
     height: 4px;
@@ -1024,11 +1032,11 @@ details {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+.sidebar-toggle-button span:first-child {
     transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+.sidebar-toggle-button span:nth-last-child(1) {
     transform-origin: 0% 100%;
 }
 
@@ -1036,16 +1044,16 @@ details {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span {
+body:not(.close) .sidebar-toggle-button span:nth-last-child(3) {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(-1px, -2px);
     background: #FFC849;
 }
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+body:not(.close) .sidebar-toggle-button span:nth-last-child(2) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -1053,6 +1061,6 @@ details {
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+body:not(.close) .sidebar-toggle-button span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-1px, 2px);
 }
