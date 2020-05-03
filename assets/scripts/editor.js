@@ -7,8 +7,7 @@
     });
 
     let textArea = document.getElementById("in");
-    let defaultCode = "\
-        *BigBrain Team @5.2.20* \n\
+    let defaultCode = "*BigBrain Team @5.2.20* \n\
         # Welcome to the Editor!\n\
         ## Important Notesn\n\
         - We use markdown to generate courses.\n\
@@ -17,7 +16,7 @@
         !> **Important:** Your changes do not save after closing this tab! :grimace:";
 
     var codeInput = CodeMirror(textArea, {
-        viewportMargin: Infinity,
+        
         value: defaultCode,
         theme: "material-palenight",
         mode: "gfm",
