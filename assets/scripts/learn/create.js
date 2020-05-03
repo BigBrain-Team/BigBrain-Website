@@ -1,20 +1,16 @@
-;
-(function() {
-    window.$docsify = {
-        name: "Me",
-        homepage: "../preview.md",
-        tabs: {
-            persist: true,
-            sync: false
-        }
+window.$docsify = {
+    homepage: "preview.md",
+    tabs: {
+        persist: true,
+        sync: false
     }
+}
 
-    function install(hook) {
-        hook.beforeEach(function(content) {
-            return content + "# added content**";
-        });
-    }
+function install(hook) {
+    hook.beforeEach(function(content) {
+        return content + parent.getMarkdown();
+    });
+}
 
-    window.$docsify = window.$docsify || {};
-    window.$docsify.plugins = [install].concat(window.$docsify.plugins || []);
-})();
+window.$docsify = window.$docsify || {};
+window.$docsify.plugins = [install].concat(window.$docsify.plugins || []);
