@@ -1025,3 +1025,12 @@ details {
 .docsify-tabs__tab {
     cursor: pointer;
 }
+
+.sidebar,
+.sidebar-toggle {
+    display: none !important;
+}
+
+.content {
+    left: 0px !important;
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.css" integrity="sha256-vZ3SaLOjnKO/gGvcUWegySoDU6ff33CS5i9ot8J9Czk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/theme/material-palenight.min.css" integrity="sha256-9G3R1zboD03rUzCB95mrbT1eEXNcbr9ei3TIbVh7pEU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha256-hpX1/GTWVZP5djpbKNFLw048+AIxfh/60hJafI/t+v4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/styles/menu.css" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/assets/styles/editor.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.js" integrity="sha256-sRwcFCKzBvYiAJfddXlx1Ld5+hAxpYzCM+drX/GHMKE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/xml/xml.min.js" integrity="sha256-Lfk8z6WUsBN6YiCaMpH6bxBHyRqkPK4O2QbQHFNUS40=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/markdown/markdown.min.js" integrity="sha256-tD4fOOV1dP+fQrZwpE/IbAw1/0BXPYusHBQYCEfpgqg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/addon/mode/overlay.min.js" integrity="sha256-YxRLL5230ecE9nov7s/keP4PRXTIoWEPVDW2DDdrbts=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/gfm/gfm.min.js" integrity="sha256-0Ggqa3GGGOXc57TIkMr4P/4SwLhOtAoxLeTa7OLgsfY=" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/fd15234bac.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha256-3R+azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0=" crossorigin="anonymous"></script>
+    <script defer src="/assets/scripts/navbar.js"></script>
+    <script defer src="/assets/scripts/scroll.js"></script>
+    <script defer src="/assets/scripts/editor.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div data-aos-delay=500 data-aos="fade-right" id="menuToggle">
+            <input type="checkbox" id="checkbox-nav" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="/#courses">
+                    <li>Courses</li>
+                </a>
+                <a href="/#about">
+                    <li>About Us</li>
+                </a>
+                <a target="_blank" href="mailto:nath49ers@gmail.com?subject=New%20Course%20for%20BigBrain!&body=Hello!%20%F0%9F%91%8B%2C%0D%0A%0D%0A%5B%20Send%20context%20if%20needed.%20If%20you%20are%20in%20our%20discord%2C%20you%20can%20send%20questions%20and%2For%20a%20new%20course%2Flesson.%20%5D%0D%0A%0D%0A-%20Your%20Name%20%F0%9F%A6%84">
+                    <li><button id="nav-btn" class="big-btn">Contact</button></li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <a href="/create">
+            <h1 data-aos="fade-down">BigBrain Editor</h1>
+        </a>
+        <div class="cards-container">
+            <div data-aos="fade-right" id="in">
+                <h1>Start Typing!</h1>
+                <button id="preview-btn">Preview Changes</button>
+            </div>
+            <iframe data-aos="fade-left" id="out" src="output.html"></iframe>
+        </div>
+    </section>
+    <section class="footer dark">
+        <div class="footer-body">
+            <div data-aos="zoom-in-right" class="col">
+                <a href="/#home">
+                    <div>
+                        <h1>BigBrain</h1>
+                        <p>Expand your knowledge.</p>
+                    </div>
+                </a>
+            </div>
+            <div data-aos="zoom-in-left" class="col">
+                <div>
+                    <h2>Contact</h1>
+                        <div>
+                            <a href="https://discord.gg/YUgpv2E"><i class="white fab fa-2x fa-discord"></i></a>
+                            <a href="https://github.com/BigBrain-Team/BigBrain-Website/issues">
+                                <i class="white fab fa-2x fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>BigBrain 2020 | <a class="gold" href="https://icons8.com">Illustrations</a></p>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+    AOS.init({
+        duration: 1000,
+        easing: "easeInOutQuint",
+        anchorPlacement: "top-bottom"
+    });
+</script>
+
+</html>
