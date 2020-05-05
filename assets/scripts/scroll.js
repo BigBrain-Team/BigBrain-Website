@@ -15,7 +15,7 @@ $('a[href*="#"]')
             if (target.length) {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
-                $('html, body').animate({
+                $('html, body').stop(true, false).animate({
                     scrollTop: target.offset().top
                 }, 1000, "easeInOutCubic", function() {
                     // Callback after animation

@@ -86,6 +86,10 @@ auth.onAuthStateChanged((user) => {
         if (document.getElementById("app") || document.querySelector("main")) {
             window.location.href = "/login";
         }
+
+        if (document.getElementById("creator")) {
+            window.location.href = "/login";
+        }
     }
 });
 

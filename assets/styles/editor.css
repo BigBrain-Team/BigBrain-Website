@@ -1,0 +1,68 @@
+#in-wrapper, #out {
+    overflow: hidden !important;
+    border: 3px black solid;
+    margin: 1.5vw;
+    border-radius: 20px 20px;
+}
+
+#out,
+#in {
+    overflow-y: auto;
+    width: 35vw;
+    height: 70vh;
+}
+
+.cards-container.stacked #out, 
+.cards-container.stacked #in {
+    width: 70vw;
+}
+
+#in {
+    background-color: #292d3e;
+    z-index:5
+}
+
+#in h1,
+#in button {
+    margin: 1vh 1vw;
+    margin-right: 0;
+}
+
+#in h1 {
+    color: #EDEFEF;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 2.5vh;
+}
+
+.CodeMirror {
+    margin-top: 1vw;
+    height: auto;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+}
+
+.btn-row {
+    padding: 5px;
+    border-radius: 10px 10px;
+    margin: 1vw;
+}
+
+.cards-container.stacked {
+    flex-direction: column;
+}
+
+#hider {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#hider:hover {
+    color: #da7071;
+    transform: scale(0.95);
+}
+
+#hider:active {
+    transition: transform 0.2s;
+    transform: scale(0.8);
+}
