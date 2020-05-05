@@ -1,16 +1,16 @@
-window.$docsify = {
-    homepage: "preview.md",
-    tabs: {
-        persist: true,
-        sync: false
-    }
-}
+;
+(function() {
+    window.$docsify = window.$docsify || {};
+    window.$docsify.plugins = [].concat(
+        function(a) {
+            a.beforeEach(function(content) {
+                let text = parent.getMarkdown();
 
-function install(hook) {
-    hook.beforeEach(function(content) {
-        return content + parent.getMarkdown();
-    });
-}
-
-window.$docsify = window.$docsify || {};
-window.$docsify.plugins = [install].concat(window.$docsify.plugins || []);
+                if (text == "") {
+                    return "!> Your content will be displayed here -- just type!" + content;
+                }
+                return parent.getMarkdown() + content;
+            });
+        },
+        window.$docsify.plugins || []);
+})();

@@ -51,6 +51,10 @@ button:hover {
     background-color: white;
 }
 
+button:disabled:hover {
+    background-color: #FFC849;
+}
+
 .icon-btn {
     display: flex;
     justify-content: center;
@@ -65,6 +69,32 @@ button:hover {
     height: 40px;
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+.small-btn {
+    margin: 5px 0 !important;
+    margin-left: 5px !important;
+    font-size: 15px;
+    padding: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.small-btn i {
+    transition: transform 0.5s ease-in-out;
+}
+
+.small-btn:hover {
+    background-color: lightgray;
+}
+
+.small-btn:hover i {
+    transform: rotate(90deg);
+}
+
+.small-btn:active i {
+    transform: rotate(360deg);
 }
 
 .big-btn {
@@ -112,6 +142,7 @@ section h1 {
 .img img {
     text-align: center;
     width: 100%;
+    pointer-events: none;
 }
 
 .jumbotron .text h2 {
@@ -322,6 +353,13 @@ card form {
     align-items: center;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
 
 /* COLORS */
 
@@ -346,5 +384,13 @@ card form {
 }
 
 .white-b {
-    background-color: white !important;
+    background-color: white;
+}
+
+.gray-b {
+    background-color: gray;
+}
+
+.green-b {
+    background-color: #3BAA54 !important;
 }

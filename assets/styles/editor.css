@@ -1,12 +1,20 @@
-#out,
-#in {
-    width: 35vw;
-    height: 70vh;
+#in-wrapper, #out {
+    overflow: hidden !important;
     border: 3px black solid;
     margin: 1.5vw;
     border-radius: 20px 20px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+}
+
+#out,
+#in {
+    overflow-y: auto;
+    width: 35vw;
+    height: 70vh;
+}
+
+.cards-container.stacked #out, 
+.cards-container.stacked #in {
+    width: 70vw;
 }
 
 #in {
@@ -18,7 +26,6 @@
 #in button {
     margin: 1vh 1vw;
     margin-right: 0;
-    font-family: 'Roboto Mono', monospace;
 }
 
 #in h1 {
@@ -33,4 +40,29 @@
     height: auto;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1em;
+}
+
+.btn-row {
+    padding: 5px;
+    border-radius: 10px 10px;
+    margin: 1vw;
+}
+
+.cards-container.stacked {
+    flex-direction: column;
+}
+
+#hider {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#hider:hover {
+    color: #da7071;
+    transform: scale(0.95);
+}
+
+#hider:active {
+    transition: transform 0.2s;
+    transform: scale(0.8);
 }
