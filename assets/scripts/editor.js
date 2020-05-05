@@ -57,7 +57,7 @@ function replaceAtCaret(str) {
             "## Important Notes\n" +
             "- We use [markdown](https://www.markdownguide.org/basic-syntax/) to generate courses.\n" +
             "- This allows for great customizability and it's easy to learn!\n" +
-            "- Your work will be saved on this computer. :computer:\n"+
+            "- Your work will be saved on this computer. :computer:\n" +
             "- More features to aid your lesson creation comming soon...\n\n\n";
     }
 
@@ -69,7 +69,12 @@ function replaceAtCaret(str) {
         lineNumbers: true
     });
     codeInput.focus();
-    codeInput.setCursor(9);
+    codeInput.setCursor(codeInput.lineCount());
+
+    // Init Math Field
+    MathLive.makeMathField("mathfield", {
+        virtualKeyboardMode: 'manual'
+    });
 
     // Reload Button
     document.getElementById("preview-btn")
@@ -91,12 +96,22 @@ function replaceAtCaret(str) {
             replaceAtCaret(text);
         });
 
-    // Equation Button
+    // Inline Equation Button
     document.getElementById("eq")
         .addEventListener("click", function() {
-            let text = "$ f(x) $ ";
-            replaceAtCaret(text);
+            let text = document.getElementById("mathfield").mathfield.$text();
+            text = text.replace("\\mright", "\\right").replace("\\mleft", "\\left");
+            replaceAtCaret(`$${text}$`);
         });
+
+    // Block Equation Button
+    document.getElementById("eq-block")
+        .addEventListener("click", function() {
+            let text = document.getElementById("mathfield").mathfield.$text();
+            text = text.replace("\\mright", "\\right").replace("\\mleft", "\\left");
+            replaceAtCaret(`\n$$${text}$$\n`);
+        });
+
 
     // Alert Button
     document.getElementById("alert-btn")
@@ -158,7 +173,7 @@ function replaceAtCaret(str) {
             } else {
                 replaceAtCaret("[text](url)");
             }
-            
+
         });
 
     document.getElementById("auto")
@@ -191,5 +206,9 @@ function replaceAtCaret(str) {
         }
     });
 
+    // Post Init
     applyAutoStates();
+
+
+    $(".ML__virtual-keyboard-toggle").attr("data-tooltip", "Keyboard");
 })();

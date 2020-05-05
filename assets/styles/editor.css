@@ -1,8 +1,9 @@
 #in-wrapper, #out {
-    overflow: hidden !important;
+    overflow: hidden;
     border: 3px black solid;
     margin: 1.5vw;
     border-radius: 20px 20px;
+    height: 70vh;
 }
 
 #out,
@@ -40,6 +41,11 @@
     height: auto;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1em;
+}
+
+#mathfield {
+    margin: 0 5px;
+    font-size: 120%;
 }
 
 .btn-row {
