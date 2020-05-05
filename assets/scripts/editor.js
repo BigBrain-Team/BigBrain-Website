@@ -22,9 +22,9 @@ function replaceAtCaret(str) {
         let iframe = document.getElementById("out");
         let currentPreview = iframe.src.substring(iframe.src.lastIndexOf("/") + 1);
         if (currentPreview == "preview") {
-            iframe.src = "output/#/preview2";
+            iframe.src = "/create/output/#/preview2";
         } else {
-            document.getElementById("out").src = "output/#/preview";
+            document.getElementById("out").src = "/create/output/#/preview";
         }
     }
 
