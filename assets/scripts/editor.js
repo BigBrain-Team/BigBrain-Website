@@ -58,8 +58,7 @@ function replaceAtCaret(str) {
             "- We use [markdown](https://www.markdownguide.org/basic-syntax/) to generate courses.\n" +
             "- This allows for great customizability and it's easy to learn!\n" +
             "- Your work will be saved on this computer. :computer:\n"+
-            "- More features to aid your lesson creation comming soon...\n\n" +
-            "!> **Important:** Your changes do not save after closing this tab! :hammer:\n\n\n\n\n";
+            "- More features to aid your lesson creation comming soon...\n\n\n";
     }
 
     // Init Code Editor
