@@ -37,7 +37,8 @@
 }
 
 .CodeMirror {
-    margin-top: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 50%;
     height: auto;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1em;
