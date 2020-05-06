@@ -29,7 +29,7 @@ div#app {
     font-size: 30px;
     font-weight: lighter;
     margin: 40vh auto;
-    text-align: center
+    text-align: center;
 }
 
 div#app:empty:before {
@@ -78,7 +78,7 @@ body {
     font-size: 1em;
     letter-spacing: 0;
     margin: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
@@ -252,11 +252,11 @@ main {
     position: inherit;
     min-height: 100vh;
     width: 100vw;
-    z-index: 0
+    z-index: 0;
 }
 
 main.hidden {
-    display: none
+    display: none;
 }
 
 .anchor {
