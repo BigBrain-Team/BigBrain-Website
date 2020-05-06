@@ -1,0 +1,177 @@
+<!-- This is the beginning -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- META TAGS -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- STYLES -->
+		<!-- ICONS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/solid.css" integrity="sha384-fZFUEa75TqnWs6kJuLABg1hDDArGv1sOKyoqc7RubztZ1lvSU7BS+rc5mwf1Is5a" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/brands.css" integrity="sha384-yZSrIKdp94pouX5Mo4J2MnZUIAuHlZhe3H2c4FRXeUcHvI2k0zNtPrBu8p3bjun5" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/fontawesome.css" integrity="sha384-syoT0d9IcMjfxtHzbJUlNIuL19vD9XQAdOzftC+llPALVSZdxUpVXE0niLOiw/mn" crossorigin="anonymous">
+		<!-- Animation -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha256-hpX1/GTWVZP5djpbKNFLw048+AIxfh/60hJafI/t+v4=" crossorigin="anonymous" />
+		<!-- MAIN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="/assets/styles/menu.css" />
+		<link rel="stylesheet" href="/assets/styles/main.css" />
+		<link rel="stylesheet" href="/assets/styles/inputs.css" />
+		<!-- SCRIPTS -->
+		<script defer src="https://kit.fontawesome.com/fd15234bac.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha256-3R+azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0=" crossorigin="anonymous"></script>
+		
+		<script defer src="/assets/scripts/navbar.js"></script>
+		<script defer src="/assets/scripts/scroll.js"></script>
+		<script defer src="/assets/scripts/inputs.js"></script>
+
+		<script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+		<script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+		<script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+		<script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+		<script defer src="/assets/scripts/auth.js"></script>
+		
+		<meta property="og:title" content="BigBrain">
+		<meta name="twitter:title" content="BigBrain">
+		<meta property="og:image" content="http://bigbrain.now.sh/assets/images/learning.png">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="http://bigbrain.now.sh">
+		<meta name="robots" content="index,follow">
+		<meta property="og:description" content="Free quality courses for High Schoolers. Expand your knowledge. Learn cybersecurity, math concepts, and more!">
+		<meta name="description" content="Free quality courses for High Schoolers. Expand your knowledge. Learn cybersecurity, math concepts, and more!">
+
+		<title>BigBrain | Me</title>
+	</head>
+	<body id="me">
+		<nav>
+			<div data-aos-delay=500 data-aos="fade-right" id="menuToggle">
+				<input type="checkbox" id="checkbox-nav"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					<a href="#home"><li>Profile</li></a>
+					<a href="#my-courses"><li>My Courses</li></a>
+					<a href="#settings"><li>Settings</li></a>
+					<a href="#"><li><button id="logout" class="big-btn">Logout</button></li></a>
+				</ul>
+			</div>
+		</nav>
+		<section class="dark" id="home">
+			<a href="/"><h1 data-aos="fade-down">BigBrain</h1></a>
+			<div data-aos="zoom-in" class="jumbotron">
+				<img id="pfp">
+				<div class="text">
+					<h2>Keep Learning</h2>
+					<subtitle id="log"></subtitle>
+				</div>
+			</div>
+		</section>
+		<section id="my-courses">
+			<h1 data-aos="fade-down">My Courses</h1>
+			<div class="cards-container">
+				<cards>
+					<card data-aos="zoom-in-up">
+						<h1>Lesson Creator (Beta)</h1>
+						<h2>Create your own lessons with a simple and fast editor! Supports live previews and saves your work.</h2>
+						<a href="/create"><button class="bigger-btn">Create</button></a>
+					</card>
+					<card data-aos="zoom-in-up">
+						<h1>Pre-Calculus</h1>
+						<h2>This course aims to cover all important content from Chapters 10-13 (CPM)</h2>
+						<a href="/learn/precalc-cpm/"><button class="bigger-btn">Learn</button></a>
+					</card>
+					<card data-aos="zoom-in-up">
+						<h1>Cybersecurity Basics 201</h1>
+						<h2>This is a beta/test/template course. You will only see formatting and test scenarios.</h2>
+						<a><button disabled class="bigger-btn">Coming Soon</button></a>
+					</card>
+				</cards>
+			</div>
+		</section>
+		<section class="dark" id="settings">
+			<h1 data-aos="fade-down">Settings</h1>
+			<div class="cards-container">
+				<cards>
+					<card data-aos="zoom-in-up">
+						<h1>Username</h1>
+						<h2 id="namechange-log">Change your username.</h2>
+						<form id="name-change">
+							<span class="input input--isao">
+								<input autocomplete="off" class="input__field input__field--isao" type="username" id="newname-field" />
+								<label class="input__label input__label--isao" data-content="typing...">
+									<span class="input__label-content input__label-content--isao">name</span>
+								</label>
+							</span>
+							<button class="icon-btn"><i class="green fa fa-xs fa-check"></i></button>
+						</form>
+					</card>
+					<card data-aos="zoom-in-up">
+						<h1>Photo</h1>
+						<h2 id="photochange-log">Change your profile picture.</h2>
+						<form id="pfp-change">
+							<span class="input input--isao">
+								<input autocomplete="off" class="input__field input__field--isao" type="url" id="photourl-field" />
+								<label class="input__label input__label--isao" data-content="typing url...">
+									<span class="input__label-content input__label-content--isao">url</span>
+								</label>
+							</span>
+							<button class="icon-btn"><i class="green fa fa-xs fa-check"></i></button>
+						</form>
+					</card>
+					<card data-aos="zoom-in-up">
+						<h1 class="red">Delete Profile</h1>
+						<h2 id="delete-log">Type your password to delete your account permanently.</h2>
+						<form id="delete-account">
+							<span class="input input--isao">
+								<input autocomplete="off" class="input__field input__field--isao" type="password" id="delete-field" />
+								<label class="input__label input__label--isao" data-content="You cannot undo this!">
+									<span id="name-label" class="input__label-content input__label-content--isao">Are you sure?</span>
+								</label>
+							</span>
+							<button class="icon-btn"><i class="red fa fa-sm fa-exclamation-circle"></i></button>
+						</form>
+					</card>
+				</cards>
+			</div>
+		</section>
+		<section class="footer">
+			<div class="footer-body">
+				<div data-aos="zoom-in-right" class="col">
+					<a href="/#home"><div>
+						<h1>BigBrain</h1>
+						<p>Expand your knowledge.</p>
+					</div></a>
+				</div>
+				<div data-aos="zoom-in-left" class="col">
+					<div>
+						<h2>Contact</h1>
+						<div>
+							<a href="https://discord.gg/YUgpv2E">
+								<i class="gray fab fa-2x fa-discord"></i>
+							</a>
+							<a href="https://github.com/BigBrain-Team/BigBrain-Website/issues">
+								<i class="gray fab fa-2x fa-github"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>BigBrain 2020</p>
+			</div>
+		</section>
+	</body>
+	<script>
+		AOS.init({
+			duration: 1000,
+			easing: "easeInOutQuint",
+			anchorPlacement: "top-bottom",
+			mirror: false,
+			offset: -5
+		});
+	</script>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.css" integrity="sha256-vZ3SaLOjnKO/gGvcUWegySoDU6ff33CS5i9ot8J9Czk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/theme/material-palenight.min.css" integrity="sha256-9G3R1zboD03rUzCB95mrbT1eEXNcbr9ei3TIbVh7pEU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha256-hpX1/GTWVZP5djpbKNFLw048+AIxfh/60hJafI/t+v4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/styles/menu.css" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/assets/styles/editor.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mathlive/dist/mathlive.core.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mathlive/dist/mathlive.css" />
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/fd15234bac.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha256-3R+azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/codemirror.min.js" integrity="sha256-sRwcFCKzBvYiAJfddXlx1Ld5+hAxpYzCM+drX/GHMKE=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/xml/xml.min.js" integrity="sha256-Lfk8z6WUsBN6YiCaMpH6bxBHyRqkPK4O2QbQHFNUS40=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/markdown/markdown.min.js" integrity="sha256-tD4fOOV1dP+fQrZwpE/IbAw1/0BXPYusHBQYCEfpgqg=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/addon/mode/overlay.min.js" integrity="sha256-YxRLL5230ecE9nov7s/keP4PRXTIoWEPVDW2DDdrbts=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.53.2/mode/gfm/gfm.min.js" integrity="sha256-0Ggqa3GGGOXc57TIkMr4P/4SwLhOtAoxLeTa7OLgsfY=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/mathlive"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+    <script defer src="/assets/scripts/auth.js"></script>
+    <script defer src="/assets/scripts/editor.js"></script>
+    <script defer src="/assets/scripts/navbar.js"></script>
+    <script defer src="/assets/scripts/scroll.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div data-aos-delay=500 data-aos="fade-right" id="menuToggle">
+            <input type="checkbox" id="checkbox-nav" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="#creator">
+                    <li>Creator</li>
+                </a>
+                <a href="#tips">
+                    <li>Tips</li>
+                </a>
+                <a target="_blank" href="mailto:nath49ers@gmail.com?subject=New%20Course%20for%20BigBrain!&body=Hello!%20%F0%9F%91%8B%2C%0D%0A%0D%0A%5B%20Send%20context%20if%20needed.%20If%20you%20are%20in%20our%20discord%2C%20you%20can%20send%20questions%20and%2For%20a%20new%20course%2Flesson.%20%5D%0D%0A%0D%0A-%20Your%20Name%20%F0%9F%A6%84">
+                    <li><button id="nav-btn" class="big-btn">Contact</button></li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <section id="creator">
+        <a href="/create">
+            <h1 data-aos="fade-down">Creator</h1>
+        </a>
+        <div class="cards-container">
+            <div id="in-wrapper">
+                <div id="in">
+                    <h1 data-aos="zoom-in-right">Start Typing! <i title="Hide Editor Buttons" class="fa fa-md fa-eye-slash" id="hider"></i></h1>
+                    <button title="Preview Result" id="preview-btn">Preview Changes</button>
+                    <button title="Toggle Auto Preview" id="auto"><i class="fas fa-fw fa-keyboard"></i></button>
+                    <br>
+                    <div class="btn-row white-b">
+                        <button title="Add Bold" class="small-btn bold" id="bold-btn">B</button>
+                        <button title="Add Italics" class="small-btn italic" id="italic-btn">i</button>
+                        <button title="Large Heading" class="small-btn" id="i-heading">H1</button>
+                        <button title="Medium Heading" class="small-btn" id="ii-heading">H2</button>
+                        <button title="Small Heading" class="small-btn" id="iii-heading">H3</button>
+                        <button title="Smaller Heading" class="small-btn" id="iiii-heading">H4</button>
+                        <button title="Smaller Heading" class="small-btn" id="link-btn">
+                            <>
+                        </button>
+                    </div>
+                    <div class="btn-row white-b">
+                        <button title="Change View" class="small-btn" id="flip"><i class="fa fa-fw fa-columns"></i></button>
+                        <button title="Insert Tabs" class="small-btn" id="tabs">Tabs</button>
+                        
+                        <button title="Insert Code" class="small-btn" id="alert-btn">Alert</button>
+                        <button title="Insert Code" class="small-btn" id="callout-btn">Callout</button>
+                        <button title="Insert Code" class="small-btn" id="code-btn">Code</button>
+                    </div>
+                    <div class="btn-row white-b">
+                        <div id="mathfield">f(x)=x^2</div>
+                        <button title="Insert Inline Math (LaTex)" class="small-btn gold-b" id="eq">Inline</button>
+                        <button title="Insert Math (LaTex) as block" class="small-btn gold-b" id="eq-block">Wide Block</button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <iframe id="out" src="/create/output/#/preview"></iframe>
+        </div>
+    </section>
+    <section id="tips" class="footer dark">
+        <h1 data-aos="fade-down">Tips</h1>
+        <h2 data-aos="fade-down">Save your time.</h2>
+        
+        <div class="footer-body">
+            <p>
+                1. For complex Math formulas, use
+                <a target="_blank" class="gold" href="https://symbolab.com">Symbolab</a>
+                or <a target="_blank" class="gold" href="https://www.desmos.com/calculator">Desmos</a>
+                to create your formula and copy it over to BigBrain.
+                <br>
+                2. To submit your new lesson or course, please contact us on <a class="gold" href="https://discord.gg/YUgpv2E">Discord</a>
+                or through <a target="_blank" class="gold" href="mailto:nath49ers@gmail.com?subject=Course%2FLesson%20Proposal&body=%F0%9F%91%8B%20Hello%2C%0D%0A%0D%0A%5B...include%20your%20lesson(s)...course%20topics...%5D%0D%0A%0D%0A-%20Your%20name%20%F0%9F%A6%84">email</a>.
+            </p>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-body">
+            <div data-aos="zoom-in-right" class="col">
+                <a href="/#home">
+                    <div>
+                        <h1>BigBrain</h1>
+                        <p>Expand your knowledge.</p>
+                    </div>
+                </a>
+            </div>
+            <div data-aos="zoom-in-left" class="col">
+                <div>
+                    <h2>Contact</h1>
+                        <div>
+                            <a href="https://discord.gg/YUgpv2E"><i class="fab fa-2x fa-discord"></i></a>
+                            <a href="https://github.com/BigBrain-Team/BigBrain-Website/issues">
+                                <i class="fab fa-2x fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>BigBrain 2020 | <a class="bold gold" href="https://icons8.com">Illustrations</a></p>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+AOS.init({
+    duration: 1000,
+    easing: "easeInOutQuint",
+    anchorPlacement: "top-bottom"
+});
+
+</script>
+
+</html>

@@ -1,0 +1,166 @@
+<!-- This is the beginning -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-163972637-1');
+    </script>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- STYLES -->
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/solid.css" integrity="sha384-fZFUEa75TqnWs6kJuLABg1hDDArGv1sOKyoqc7RubztZ1lvSU7BS+rc5mwf1Is5a" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/brands.css" integrity="sha384-yZSrIKdp94pouX5Mo4J2MnZUIAuHlZhe3H2c4FRXeUcHvI2k0zNtPrBu8p3bjun5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/fontawesome.css" integrity="sha384-syoT0d9IcMjfxtHzbJUlNIuL19vD9XQAdOzftC+llPALVSZdxUpVXE0niLOiw/mn" crossorigin="anonymous">
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" integrity="sha256-hpX1/GTWVZP5djpbKNFLw048+AIxfh/60hJafI/t+v4=" crossorigin="anonymous" />
+    <!-- MAIN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/styles/menu.css" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <!-- SCRIPTS -->
+    <script defer src="https://kit.fontawesome.com/fd15234bac.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha256-3R+azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0=" crossorigin="anonymous"></script>
+    <script defer src="/assets/scripts/navbar.js"></script>
+    <script defer src="/assets/scripts/scroll.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+    <script defer src="/assets/scripts/auth.js"></script>
+    <meta property="og:title" content="BigBrain">
+    <meta name="twitter:title" content="BigBrain">
+    <meta property="og:image" content="http://bigbrain.now.sh/assets/images/learning.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://bigbrain.now.sh">
+    <meta name="robots" content="index,follow">
+    <meta property="og:description" content="Free quality courses for High Schoolers. Expand your knowledge. Learn cybersecurity, math concepts, and more!">
+    <meta name="description" content="Free quality courses for High Schoolers. Expand your knowledge. Learn cybersecurity, math concepts, and more!">
+    <title>BigBrain | Free Courses for High Schoolers</title>
+</head>
+
+<body>
+    <nav>
+        <div data-aos-delay=500 data-aos="fade-right" id="menuToggle">
+            <input type="checkbox" id="checkbox-nav" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#courses">
+                    <li>Courses</li>
+                </a>
+                <a href="#about">
+                    <li>About Us</li>
+                </a>
+                <a href="login">
+                    <li><button id="nav-btn" class="big-btn">Login</button></li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <a href="/">
+            <h1 data-aos="fade-down">BigBrain</h1>
+        </a>
+        <div data-aos="zoom-in" class="jumbotron">
+            <div class="img">
+                <img src="assets/images/learning.png">
+            </div>
+            <div class="text">
+                <h2>Free quality courses.
+                    <br>Expand your knowledge.</h2>
+                <subtitle>Learn cybersecurity, math concepts, and more!</subtitle>
+            </div>
+            <div data-aos-once="true" data-aos-delay=1000 data-aos="fade-up">
+                <a href="#courses"><button class="bigger-btn">Explore</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="dark" id="courses">
+        <h1 data-aos="fade-down">Courses</h1>
+        <div class="jumbotron">
+            <div class="text">
+                <h2>Available Courses</h2>
+                <subtitle>Create a BigBrain Account to view the courses!</subtitle>
+            </div>
+        </div>
+        <div class="cards-container">
+            <cards>
+                <card data-aos="zoom-in-up">
+                    <h1>Pre-Calculus</h1>
+                    <h2>This course aims to cover all important content from Chapters 10-13</h2>
+                    <a href="/learn/precalc-cpm/"><button class="bigger-btn">Learn</button></a>
+                </card>
+            </cards>
+        </div>
+    </section>
+    <section id="about">
+        <h1 data-aos="fade-down">About Us</h1>
+        <div class="jumbotron">
+            <div data-aos="zoom-in-right" class="img">
+                <img src="assets/images/about.png">
+            </div>
+        </div>
+        <div class="cards-container">
+            <cards data-aos="zoom-in-left">
+                <card>
+                    <h1>BigBrain Team</h1>
+                    <h2>This site is still in development. If you'd like to report an issue, you can do so on our GitHub!</h2>
+                    <a target=_blank href="https://github.com/BigBrain-Team/BigBrain-Website/issues"><button class="bigger-btn">Report Bug</button></a>
+                </card>
+            </cards>
+        </div>
+    </section>
+    <section class="footer dark">
+        <div class="footer-body">
+            <div data-aos="zoom-in-right" class="col">
+                <a href="/#home">
+                    <div>
+                        <h1>BigBrain</h1>
+                        <p>Expand your knowledge.</p>
+                    </div>
+                </a>
+            </div>
+            <div data-aos="zoom-in-left" class="col">
+                <div>
+                    <h2>Contact</h1>
+                        <div>
+                            <a href="https://discord.gg/YUgpv2E"><i class="white fab fa-2x fa-discord"></i></a>
+                            <a href="https://github.com/BigBrain-Team/BigBrain-Website/issues">
+                                <i class="white fab fa-2x fa-github"></i>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>BigBrain 2020 | <a class="gold" href="https://icons8.com">Illustrations</a></p>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+    AOS.init({
+        duration: 1000,
+        easing: "easeInOutQuint",
+        anchorPlacement: "top-bottom"
+    });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163972637-1"></script>
+
+</html>
