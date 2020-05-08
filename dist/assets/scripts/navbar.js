@@ -1,1 +1,1 @@
-var mouse_is_inside=!1;$(document).ready((function(){$("#menu, #checkbox-nav").hover((function(){mouse_is_inside=!0}),(function(){mouse_is_inside=!1})),$("body").mouseup((function(){$("#checkbox-nav").is(":checked")&&!mouse_is_inside&&$("#checkbox-nav").prop("checked",!1)}))}));
+!function(){var c=!1;$(document).ready((function(){$("#menu, #checkbox-nav").hover((function(){c=!0}),(function(){c=!1})),$("body").mouseup((function(){$("#checkbox-nav").is(":checked")&&!c&&$("#checkbox-nav").prop("checked",!1)}))}))}();

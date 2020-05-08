@@ -4,12 +4,15 @@
     window.$docsify.plugins = [].concat(
         function(a) {
             a.beforeEach(function(content) {
-                let text = parent.getMarkdown();
+                if (parent) {
+                    let text = parent.getMarkdown();
 
-                if (text == "") {
-                    return "!> Your content will be displayed here -- just type!" + content;
+                    if (text == "") {
+                        return "!> Your content will be displayed here -- just type!" + content;
+                    }
+                    return text + content;
                 }
-                return parent.getMarkdown() + content;
+                return content;
             });
         },
         window.$docsify.plugins || []);
