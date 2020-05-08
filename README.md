@@ -1,6 +1,10 @@
 # BigBrain
 *Free* Learning courses for all. Aimed towards high schoolers. 
 
+## Edit Instructions
+1. Edit `src/` directory
+2. Follow build instructions below
+
 ## Build Instructions
 **IMPORTANT:** If you don't know what the script does, don't use it.
 
