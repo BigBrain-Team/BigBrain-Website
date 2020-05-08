@@ -72,7 +72,7 @@ function replaceAtCaret(str) {
     codeInput.setCursor(codeInput.lineCount());
 
     // Init Math Field
-    MathLive.makeMathField("mathfield", {
+    MathLive.default.makeMathField("mathfield", {
         virtualKeyboardMode: 'manual'
     });
 

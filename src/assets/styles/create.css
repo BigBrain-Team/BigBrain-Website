@@ -87,7 +87,8 @@ body {
     font-size: 1em;
     letter-spacing: 0;
     margin: 0;
-    overflow-x: hidden text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    overflow-x: hidden;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     background-color: white;
 }
 
@@ -452,7 +453,8 @@ body.sticky .sidebar-toggle {
 .markdown-section iframe {
     border: 1px solid #eee;
     width: 1px;
-    min-width: 100% min-height: 70vh;
+    min-width: 100%;
+    min-height: 70vh;
 }
 
 .markdown-section table {
@@ -724,7 +726,8 @@ section.cover blockquote>p>a:hover {
 }
 
 .sidebar {
-    background-color: #f3f3f3 color: #364149
+    background-color: #f3f3f3;
+    color: #364149
 }
 
 .sidebar li {

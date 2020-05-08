@@ -1,8 +1,9 @@
 /* Original CSS by Docsify.js */
+
+
 /* Modified by Nathan Choi (b0kch01) */
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
-
 #main {
     margin-top: 20px;
 }
@@ -21,7 +22,9 @@ body:not(.ready) {
     overflow: hidden
 }
 
-body:not(.ready) .app-nav, body:not(.ready)>nav, body:not(.ready) [data-cloak] {
+body:not(.ready) .app-nav,
+body:not(.ready)>nav,
+body:not(.ready) [data-cloak] {
     display: none
 }
 
@@ -57,7 +60,8 @@ div#app:empty:before {
     z-index: 999999
 }
 
-.search .search-keyword, .search a:hover {
+.search .search-keyword,
+.search a:hover {
     color: var(--theme-color, #42b983)
 }
 
@@ -66,7 +70,8 @@ div#app:empty:before {
     font-weight: 700
 }
 
-body, html {
+body,
+html {
     height: 100%
 }
 
@@ -79,10 +84,11 @@ body {
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
-#fin, #unfin {
+#fin,
+#unfin {
     cursor: pointer;
     outline: 0;
     border: 0;
@@ -95,12 +101,14 @@ body {
     margin-left: 5px;
 }
 
-#fin:hover, #unfin:hover {
+#fin:hover,
+#unfin:hover {
     opacity: 0.8;
     transform: scale(0.98);
 }
 
-#fin:active, #unfin:active {
+#fin:active,
+#unfin:active {
     opacity: 0.5;
     transform: scale(0.9);
     transition: transform 0.1s;
@@ -157,7 +165,8 @@ li input[type=checkbox] {
     padding: 5px 0
 }
 
-.app-nav li, .app-nav ul {
+.app-nav li,
+.app-nav ul {
     display: inline-block;
     list-style: none;
     margin: 0
@@ -170,7 +179,8 @@ li input[type=checkbox] {
     transition: color .3s
 }
 
-.app-nav a.active, .app-nav a:hover {
+.app-nav a.active,
+.app-nav a:hover {
     color: var(--theme-color, #42b983)
 }
 
@@ -262,7 +272,7 @@ main.hidden {
 .anchor {
     display: inline-block;
     text-decoration: none;
-} 
+}
 
 .anchor span {
     color: #34495e;
@@ -286,7 +296,6 @@ main.hidden {
     width: 300px;
     z-index: 20;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
 }
 
 .sidebar>h1 {
@@ -325,7 +334,8 @@ main.hidden {
     margin: 0
 }
 
-.sidebar ul, .sidebar ul li {
+.sidebar ul,
+.sidebar ul li {
     list-style: none
 }
 
@@ -394,7 +404,8 @@ main.hidden {
     border-radius: 10px;
 }
 
-body.sticky .sidebar, body.sticky .sidebar-toggle {
+body.sticky .sidebar,
+body.sticky .sidebar-toggle {
     position: fixed
 }
 
@@ -410,7 +421,6 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     transition: left .25s ease;
     font-size: 18px;
     transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
 }
 
 .markdown-section {
@@ -438,7 +448,7 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 .markdown-section iframe {
     border: 1px solid #eee;
     width: 1px;
-    min-width: 100%
+    min-width: 100%;
     min-height: 70vh;
 }
 
@@ -455,7 +465,8 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     font-weight: 700
 }
 
-.markdown-section td, .markdown-section th {
+.markdown-section td,
+.markdown-section th {
     border: 1px solid #ddd;
     padding: 6px 13px
 }
@@ -464,7 +475,8 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     border-top: 1px solid #ccc
 }
 
-.markdown-section p.tip, .markdown-section tr:nth-child(2n) {
+.markdown-section p.tip,
+.markdown-section tr:nth-child(2n) {
     background-color: #f8f8f8
 }
 
@@ -525,35 +537,34 @@ body.close .content {
 }
 
 @media print {
-    .app-nav, .github-corner, .sidebar, .sidebar-toggle {
+    .app-nav,
+    .github-corner,
+    .sidebar,
+    .sidebar-toggle {
         display: none
     }
-
 }
 
 @media screen and (max-width:768px) {
-    .github-corner, .sidebar, .sidebar-toggle {
+    .github-corner,
+    .sidebar,
+    .sidebar-toggle {
         position: fixed
     }
-
     .app-nav {
         margin-top: 16px
     }
-
     .app-nav li ul {
         top: 30px
     }
-
     main {
         height: auto;
         overflow-x: hidden
     }
-
     .sidebar {
         left: -300px;
         transition: transform .25s ease-out
     }
-
     .content {
         left: 0;
         max-width: 100vw;
@@ -561,68 +572,62 @@ body.close .content {
         padding-top: 20px;
         transition: transform .25s ease
     }
-
-    .app-nav, .github-corner {
+    .app-nav,
+    .github-corner {
         transition: transform .25s ease-out
     }
-
     .sidebar-toggle {
         background-color: transparent;
         width: auto;
     }
-
     body.close .sidebar {
         transform: translateX(300px)
     }
-
     body.close .content {
         transform: translateX(300px)
     }
-
-    body.close .app-nav, body.close .github-corner {
+    body.close .app-nav,
+    body.close .github-corner {
         display: none
     }
-
     .github-corner:hover .octo-arm {
         -webkit-animation: none;
         animation: none
     }
-
     .github-corner .octo-arm {
         -webkit-animation: octocat-wave .56s ease-in-out;
         animation: octocat-wave .56s ease-in-out
     }
-
 }
 
 @-webkit-keyframes octocat-wave {
-    0%, to {
+    0%,
+    to {
         transform: rotate(0)
     }
-
-    20%, 60% {
+    20%,
+    60% {
         transform: rotate(-25deg)
     }
-
-    40%, 80% {
+    40%,
+    80% {
         transform: rotate(10deg)
     }
-
 }
 
 @keyframes octocat-wave {
-    0%, to {
+    0%,
+    to {
         transform: rotate(0)
     }
-
-    20%, 60% {
+    20%,
+    60% {
         transform: rotate(-25deg)
     }
-
-    40%, 80% {
+    40%,
+    80% {
         transform: rotate(10deg)
     }
-
 }
 
 section.cover {
@@ -658,7 +663,8 @@ section.cover a {
     color: inherit
 }
 
-section.cover a, section.cover a:hover {
+section.cover a,
+section.cover a:hover {
     text-decoration: none
 }
 
@@ -740,11 +746,6 @@ section.cover blockquote>p>a:hover {
     background-color: #fff
 }
 
-.sidebar {
-    background-color: #f3f3f3
-    color: #364149
-}
-
 .sidebar li {
     margin: 6px 0
 }
@@ -779,7 +780,11 @@ section.cover blockquote>p>a:hover {
     float: left
 }
 
-.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section strong {
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section strong {
     color: #2c3e50;
     font-weight: 600
 }
@@ -817,16 +822,20 @@ section.cover blockquote>p>a:hover {
     font-size: 1rem
 }
 
-.markdown-section figure, .markdown-section p {
+.markdown-section figure,
+.markdown-section p {
     margin: 1.2em 0
 }
 
-.markdown-section ol, .markdown-section p, .markdown-section ul {
+.markdown-section ol,
+.markdown-section p,
+.markdown-section ul {
     line-height: 1.6rem;
     word-spacing: .05rem
 }
 
-.markdown-section ol, .markdown-section ul {
+.markdown-section ol,
+.markdown-section ul {
     padding-left: 1.5rem
 }
 
@@ -859,7 +868,8 @@ section.cover blockquote>p>a:hover {
     white-space: pre-wrap
 }
 
-.markdown-section code, .markdown-section pre {
+.markdown-section code,
+.markdown-section pre {
     background-color: #f8f8f8;
     font-family: Roboto Mono, Monaco, courier, monospace
 }
@@ -875,7 +885,10 @@ section.cover blockquote>p>a:hover {
     word-wrap: normal
 }
 
-.token.cdata, .token.comment, .token.doctype, .token.prolog {
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
     color: #8e908c
 }
 
@@ -883,7 +896,8 @@ section.cover blockquote>p>a:hover {
     opacity: .7
 }
 
-.token.boolean, .token.number {
+.token.boolean,
+.token.number {
     color: #c76b29
 }
 
@@ -911,23 +925,33 @@ section.cover blockquote>p>a:hover {
     color: #2973b7
 }
 
-.language-css .token.string, .style .token.string, .token.entity, .token.url {
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.url {
     color: #22a2c9
 }
 
-.token.attr-value, .token.control, .token.directive, .token.unit {
+.token.attr-value,
+.token.control,
+.token.directive,
+.token.unit {
     color: var(--theme-color, #42b983)
 }
 
-.token.function, .token.keyword {
+.token.function,
+.token.keyword {
     color: #e96900
 }
 
-.token.atrule, .token.regex, .token.statement {
+.token.atrule,
+.token.regex,
+.token.statement {
     color: #22a2c9
 }
 
-.token.placeholder, .token.variable {
+.token.placeholder,
+.token.variable {
     color: #3d8fd1
 }
 
@@ -944,7 +968,8 @@ section.cover blockquote>p>a:hover {
     font-style: italic
 }
 
-.token.bold, .token.important {
+.token.bold,
+.token.important {
     font-weight: 700
 }
 
@@ -973,7 +998,8 @@ section.cover blockquote>p>a:hover {
     white-space: inherit
 }
 
-.markdown-section code:after, .markdown-section code:before {
+.markdown-section code:after,
+.markdown-section code:before {
     letter-spacing: .05rem
 }
 
@@ -1007,7 +1033,8 @@ details {
     --theme-color: #FFC849;
 }
 
-.medium-zoom-image--opened, .medium-zoom-overlay {
+.medium-zoom-image--opened,
+.medium-zoom-overlay {
     z-index: 31;
 }
 
@@ -1040,27 +1067,33 @@ details {
     transform-origin: 0% 100%;
 }
 
+
 /* 
  * Transform all the slices of hamburger
  * into a crossmark.
  */
+
 body:not(.close) .sidebar-toggle-button span:nth-last-child(3) {
     opacity: 1;
     transform: rotate(45deg) translate(-1px, -2px);
     background: #FFC849;
 }
 
+
 /*
  * But let's hide the middle one.
  */
+
 body:not(.close) .sidebar-toggle-button span:nth-last-child(2) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
+
 /*
  * Ohyeah and the last one should go the other direction
  */
+
 body:not(.close) .sidebar-toggle-button span:nth-last-child(1) {
     transform: rotate(-45deg) translate(-1px, 2px);
 }
