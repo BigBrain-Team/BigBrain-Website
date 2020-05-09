@@ -1,4 +1,3 @@
-;
 (function() {
     window.$docsify = window.$docsify || {};
     window.$docsify.plugins = [].concat(

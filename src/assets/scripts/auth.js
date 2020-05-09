@@ -1,25 +1,28 @@
 // BigBrain auth.js
 // Handles everything or most of the authentication related tasks
 
-// Firebase Core
-firebase.initializeApp({
-    apiKey: "AIzaSyC0yaoAE6qt1oEzHT4ueZZUrNFMN-3U8nE",
-    authDomain: "bigbrain-c56d1.firebaseapp.com",
-    databaseURL: "https://bigbrain-c56d1.firebaseio.com",
-    projectId: "bigbrain-c56d1",
-    storageBucket: "bigbrain-c56d1.appspot.com",
-    messagingSenderId: "126863628981",
-    appId: "1:126863628981:web:f777031fa40de4be37fcfc",
-    measurementId: "G-7VYVV8F7ZH"
-});
-// Analytics
-firebase.analytics();
-// Creating an auth object to save code
-const auth = firebase.auth();
-const db = firebase.firestore();
+var auth = null;
+var db = null;
 
-;
 (function() {
+    // Firebase Core
+    firebase.initializeApp({
+        apiKey: "AIzaSyC0yaoAE6qt1oEzHT4ueZZUrNFMN-3U8nE",
+        authDomain: "bigbrain-c56d1.firebaseapp.com",
+        databaseURL: "https://bigbrain-c56d1.firebaseio.com",
+        projectId: "bigbrain-c56d1",
+        storageBucket: "bigbrain-c56d1.appspot.com",
+        messagingSenderId: "126863628981",
+        appId: "1:126863628981:web:f777031fa40de4be37fcfc",
+        measurementId: "G-7VYVV8F7ZH"
+    });
+
+    // Analytics
+    firebase.analytics();
+    // Creating an auth object to save code
+    auth = firebase.auth();
+    db = firebase.firestore();
+
     // Executes when user state changes
     auth.onAuthStateChanged((user) => {
         // If user is logged in

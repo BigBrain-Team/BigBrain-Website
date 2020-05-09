@@ -1,4 +1,3 @@
-;
 (function() {
     var mouse_is_inside = false;
 

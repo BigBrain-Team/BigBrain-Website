@@ -46,7 +46,7 @@ for subdir, dirs, files in os.walk("src"):
             os.system(f'cssnano {src_dir} {tmp_dir}')
         else:
             shutil.copy(src_dir, tmp_dir)
-            time.sleep(0.02)
+            time.sleep(0.01)
 
         # Its satisfying (ph. trick)
         b.next()

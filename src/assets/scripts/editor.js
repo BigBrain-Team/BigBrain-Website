@@ -1,16 +1,9 @@
 let codeInput = null;
 var auto = true;
 
-function getMarkdown() {
-    return codeInput.getValue();
-}
+getMarkdown = null;
+replaceAtCaret = null;
 
-function replaceAtCaret(str) {
-    codeInput.replaceSelection(str);
-    codeInput.focus();
-}
-
-;
 (function() {
     if (typeof(Storage) === "undefined") {
         alert("Your browser does not support saving. Please use the latest version of Google Chrome, Edge, Firefox, Safari, or Opera.");
@@ -45,6 +38,15 @@ function replaceAtCaret(str) {
         auto = !auto;
         window.localStorage.autoStored = auto;
         applyAutoStates();
+    }
+
+    replaceAtCaret = function(str) {
+        codeInput.replaceSelection(str);
+        codeInput.focus();
+    }
+
+    getMarkdown = function() {
+        return codeInput.getValue();
     }
 
     var defaultCode = "";
