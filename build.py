@@ -1,18 +1,22 @@
-import os
-import sys
-import time
-
-# Clear terminal (cross-platform)
-os.system("cls" if (os.name == "dt") else "clear")
-
-print("🦄 Use python3 please.")
-print("📦 Deps: shutil, progress")
-if input("\nPress [Enter] to continue. Enter any key to quit: ") != "":
+try:
+    import os
+    import time
+    import shutil
+    from progress.bar import ShadyBar
+except ModuleNotFoundError:
+    print("🦄 Use python3 please.")
+    print("📦 Python deps needed: shutil, progress")
+    print("🍳 CLI (npm) needed: cssnano, terser")
     exit(0)
 
-import shutil
-from progress.bar import ShadyBar
-from progress.spinner import Spinner
+# Clear terminal (cross-platform)
+os.system("cls" if (os.name == "nt") else "clear")
+
+print("🦄 Use python3 please.")
+print("📦 Python deps needed: shutil, progress")
+print("🍳 CLI (npm) needed: cssnano, terser")
+if input("\nPress [Enter] to continue. Enter any key to quit: ") != "":
+    exit(0)
 
 # Minify Configs:
 configs = {
@@ -51,10 +55,13 @@ for subdir, dirs, files in os.walk("src"):
         # Its satisfying (ph. trick)
         b.next()
 b.finish()
-print("---|---------------------")
+
+print("\n[ Minifying successful, cleaning up ]\n")
+
 print("📑 | Overwritting [dist/]")
 shutil.rmtree("dist/")
 shutil.copytree("dist-tmp/", "dist/")
+
 print("🚫 | Deleting [dist-tmp/]")
 shutil.rmtree("dist-tmp/")
-print("✅ | Finished!")
+print("🏁 | Finished!")
