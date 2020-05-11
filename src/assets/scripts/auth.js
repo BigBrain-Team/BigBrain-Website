@@ -2,7 +2,6 @@
 // Handles everything or most of the authentication related tasks
 
 var auth = null;
-var db = null;
 
 (function() {
     // Firebase Core
@@ -21,7 +20,7 @@ var db = null;
     firebase.analytics();
     // Creating an auth object to save code
     auth = firebase.auth();
-    db = firebase.firestore();
+    const db = firebase.firestore();
 
     // Executes when user state changes
     auth.onAuthStateChanged((user) => {

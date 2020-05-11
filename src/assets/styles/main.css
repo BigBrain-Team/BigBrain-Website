@@ -51,7 +51,19 @@ button:hover {
     background-color: white;
 }
 
+button.alt {
+    background-color: #EDEFEF;
+}
+
+button.alt:hover {
+    background-color: #FFC849;
+}
+
 button:disabled:hover {
+    background-color: #FFC849;
+}
+
+button.alt:disabled:hover {
     background-color: #FFC849;
 }
 
@@ -273,7 +285,8 @@ section h1 {
 /* SECTION SPECIFIC */
 
 #home,
-#courses .text {
+#courses,
+.text {
     text-align: center;
 }
 
@@ -361,6 +374,7 @@ card form {
     font-style: italic;
 }
 
+
 /* COLORS */
 
 .red {
@@ -396,5 +410,5 @@ card form {
 }
 
 .gold-b {
-	background-color: #FFC849;
+    background-color: #FFC849;
 }

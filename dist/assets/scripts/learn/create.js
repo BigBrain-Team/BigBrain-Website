@@ -1,1 +1,1 @@
-window.$docsify=window.$docsify||{},window.$docsify.plugins=[].concat((function(n){n.beforeEach((function(n){if(parent){let i=parent.getMarkdown();return""==i?"!> Your content will be displayed here -- just type!"+n:i+n}return n}))}),window.$docsify.plugins||[]);
+window.$docsify=window.$docsify||{},window.$docsify.plugins=[].concat((function(n){n.beforeEach((function(n){if(parent.getMarkdown){let o=parent.getMarkdown();return""==o?"!> Your content will be displayed here -- just type!"+n:o+n}return n}))}),window.$docsify.plugins||[]);

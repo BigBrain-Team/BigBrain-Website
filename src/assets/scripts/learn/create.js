@@ -3,7 +3,7 @@
     window.$docsify.plugins = [].concat(
         function(a) {
             a.beforeEach(function(content) {
-                if (parent) {
+                if (parent.getMarkdown) {
                     let text = parent.getMarkdown();
 
                     if (text == "") {

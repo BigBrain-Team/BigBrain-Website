@@ -4,6 +4,7 @@ var auto = true;
 getMarkdown = null;
 replaceAtCaret = null;
 
+// Mostly Editor Functions
 (function() {
     if (typeof(Storage) === "undefined") {
         alert("Your browser does not support saving. Please use the latest version of Google Chrome, Edge, Firefox, Safari, or Opera.");
@@ -56,7 +57,7 @@ replaceAtCaret = null;
     } else {
         defaultCode = "*BigBrain Team @5.3.20* \n" +
             "# Welcome to the Editor!\n" +
-            "## Important Notes\n" +
+            "## About\n" +
             "- We use [markdown](https://www.markdownguide.org/basic-syntax/) to generate courses.\n" +
             "- This allows for great customizability and it's easy to learn!\n" +
             "- Your work will be saved on this computer. :computer:\n" +
@@ -210,7 +211,37 @@ replaceAtCaret = null;
 
     // Post Init
     applyAutoStates();
-
-
     $(".ML__virtual-keyboard-toggle").attr("data-tooltip", "Keyboard");
+})();
+
+// Mostly Builder Functions
+(function() {
+    const list = document.getElementById("sidebar-flow");
+    const list2 = document.getElementById("sidebar-catalog")
+
+    new Sortable(list, {
+        group: "main",
+        handle: ".grip",
+        animation: 150,
+        fallbackOnBody: true,
+        removeCloneOnHide: true,
+    });
+
+    new Sortable(list2, {
+        group: {
+            name: "main",
+            pull: "clone",
+            put: false,
+        },
+        sort: false,
+        handle: ".grip",
+        animation: 150,
+        fallbackOnBody: true,
+    });
+
+    $("item > i.red").click(function() {
+        $(this).parent().slideToggle(100, function() {
+            $(this).remove();
+        });
+    });
 })();

@@ -1,4 +1,5 @@
-#in-wrapper, #out {
+#in-wrapper,
+#out {
     overflow: hidden;
     border: 3px black solid;
     margin: 1.5vw;
@@ -13,14 +14,14 @@
     height: 70vh;
 }
 
-.cards-container.stacked #out, 
+.cards-container.stacked #out,
 .cards-container.stacked #in {
     width: 70vw;
 }
 
 #in {
     background-color: #292d3e;
-    z-index:5
+    z-index: 5
 }
 
 #in h1,
@@ -38,7 +39,6 @@
 
 .CodeMirror {
     margin-top: 1vh;
-    margin-bottom: 50%;
     height: auto;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1em;
@@ -71,5 +71,77 @@
 
 #hider:active {
     transition: transform 0.2s;
+    transform: scale(0.8);
+}
+
+#sidebar-flow {
+    display: inline-block;
+}
+
+#builder .jumbotron {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+#builder .cards-container {
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+list {
+    display: block;
+    width: 35vw;
+}
+
+item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    color: #292d3e;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    background-color: #FFC849;
+    border-radius: 5px 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+item *:not(.red) {
+    margin-right: 15px;
+}
+
+item i {
+    cursor: grab;
+}
+
+item input {
+    background-color: #FFC849;
+    border: none;
+    width: 100%;
+}
+
+item input[placeholder="Heading"],
+item input[placeholder="Course Title"] {
+    font-weight: bold;
+}
+
+item.white-b input {
+    background-color: white;
+}
+
+#sidebar-catalog i.red,
+#sidebar-catalog i.green {
+    display: none;
+}
+
+item i.red:active,
+item i.green:active {
     transform: scale(0.8);
 }
