@@ -144,7 +144,9 @@ var finishedLessonsLocal = [];
         });
 
         hook.mounted(function() {
-            renderLearn(auth.currentUser);
+            if (auth.currentUser) {
+                renderLearn(auth.currentUser);
+            }
         });
     }
 
