@@ -93,6 +93,8 @@ var auth = null;
         }).catch(function(error) {
             alert("Error: " + error);
         });
+
+        console.log("User data attempted to load.")
     }
 
     // Logging in a user

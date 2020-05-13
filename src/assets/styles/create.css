@@ -1032,9 +1032,9 @@ details {
 
 .sidebar,
 .sidebar-toggle {
-    display: none !important;
+    display: none;
 }
 
 .content {
-    left: 0px !important;
+    left: 0px;
 }

@@ -142,6 +142,10 @@ var finishLesson = null;
                 setTimeout(saveToggleStates);
             });
         });
+
+        hook.mounted(function() {
+            renderLearn(auth.currentUser);
+        });
     }
 
     // Initial Setup

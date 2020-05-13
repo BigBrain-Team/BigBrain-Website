@@ -75,7 +75,7 @@ replaceAtCaret = null;
     codeInput.setCursor(codeInput.lineCount());
 
     // Init Math Field
-    MathLive.default.makeMathField("mathfield", {
+    MathLive.	makeMathField("mathfield", {
         virtualKeyboardMode: 'manual'
     });
 
@@ -140,7 +140,7 @@ replaceAtCaret = null;
     // Flip View Button
     document.getElementById("flip")
         .addEventListener("click", function() {
-            $(".cards-container").toggleClass("stacked");
+            $("#creator > .cards-container").toggleClass("stacked");
         });
 
     document.getElementById("bold-btn")
@@ -214,6 +214,9 @@ replaceAtCaret = null;
     $(".ML__virtual-keyboard-toggle").attr("data-tooltip", "Keyboard");
 })();
 
+var grabheadings = null;
+var getSidebarMarkdown = null;
+
 // Mostly Builder Functions
 (function() {
     const list = document.getElementById("sidebar-flow");
@@ -244,4 +247,65 @@ replaceAtCaret = null;
             $(this).remove();
         });
     });
+
+	// Gets tree of values
+    grabHeadings = function() {
+    	let items = [];
+
+    	$("#sidebar-flow").children().each(function() {
+    		const txt = $(this).find("input").val()
+    		const placeholder = $(this).find("input").attr("placeholder");
+
+    		if (txt) {
+    			items.push([txt, placeholder]);
+    		} else {
+    			items.push([placeholder, placeholder]);
+    		}
+    	});
+
+    	return items;
+    }
+
+    getSidebarMarkdown = function() {
+		const list = grabHeadings();
+		
+		let markdown = "";
+		let courseTitle = "";
+		let startedDetails = false;
+		let startedHeadings = false;
+
+		list.forEach(item => {
+			if (item[1] == "Course Title") {
+				// Just change title
+				courseTitle = item[0];
+
+			} else if (item[1] == "Lesson") {
+				// Lessons (last)
+				if (startedHeadings) markdown += "\t";
+				if (startedDetails) markdown += "\t"; 
+				markdown += `* [${item[0]}](/)\n`;
+				
+			} else if (item[1] == "Heading") {
+				// Headings (top)
+				if (startedDetails) markdown += "\n\t</details>\n\n";
+				startedDetails = false;
+				startedHeadings = true;
+				markdown += `\n* **${item[0]}**\n`;
+
+				
+			} else if (item[1] == "Toggle") {
+				if (startedDetails) markdown += "\n\t</details>\n\n";
+				if (startedHeadings) markdown += "\n\t";
+				
+				markdown += "* <details>\n";
+				markdown += "\t<summary>Conic Sections</summary>\n\n";
+				startedDetails = true;
+			}
+		});
+
+		if (startedDetails) markdown += "\n\t</details>\n\n";
+		
+		return markdown;
+    }
+    
 })();
