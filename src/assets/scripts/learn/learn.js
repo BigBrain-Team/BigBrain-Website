@@ -1,6 +1,7 @@
 console.log("Looking under the hood? Reach us on discord to help!");
 var getCourseID = null;
 var finishLesson = null;
+var finishedLessonsLocal = [];
 
 (function() {
     const db = firebase.firestore();
@@ -42,7 +43,6 @@ var finishLesson = null;
     }
 
     //=====// Finsihed Status //=====//
-    var finishedLessonsLocal = [];
 
     // Gets course id
     getCourseID = function() {

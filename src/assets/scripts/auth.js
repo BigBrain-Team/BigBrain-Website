@@ -2,6 +2,7 @@
 // Handles everything or most of the authentication related tasks
 
 var auth = null;
+var renderLearn = null;
 
 (function() {
     // Firebase Core
@@ -71,7 +72,7 @@ var auth = null;
     }
 
     // Addresses UI in all course pages
-    function renderLearn(user) {
+    renderLearn = function(user) {
         $("#navbar-title").text(user.displayName);
 
         const courseData = db.collection("users").doc(user.uid)
