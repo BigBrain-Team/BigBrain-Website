@@ -1067,33 +1067,35 @@ details {
     transform-origin: 0% 100%;
 }
 
+@media not screen and (max-width:768px) {
+    body:not(.close) .sidebar-toggle-button span:nth-last-child(3) {
+        opacity: 1;
+        transform: rotate(45deg) translate(-1px, -2px);
+        background: #FFC849;
+    }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+    body:not(.close) .sidebar-toggle-button span:nth-last-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
 
-body:not(.close) .sidebar-toggle-button span:nth-last-child(3) {
-    opacity: 1;
-    transform: rotate(45deg) translate(-1px, -2px);
-    background: #FFC849;
+    body:not(.close) .sidebar-toggle-button span:nth-last-child(1) {
+        transform: rotate(-45deg) translate(-1px, 2px);
+    }
 }
 
+@media screen and (max-width:768px) {
+    body.close .sidebar-toggle-button span:nth-last-child(3) {
+        opacity: 1;
+        transform: rotate(45deg) translate(-1px, -2px);
+        background: #FFC849;
+    }
 
-/*
- * But let's hide the middle one.
- */
-
-body:not(.close) .sidebar-toggle-button span:nth-last-child(2) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-
-body:not(.close) .sidebar-toggle-button span:nth-last-child(1) {
-    transform: rotate(-45deg) translate(-1px, 2px);
+    body.close .sidebar-toggle-button span:nth-last-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    body.close .sidebar-toggle-button span:nth-last-child(1) {
+        transform: rotate(-45deg) translate(-1px, 2px);
+    }
 }
