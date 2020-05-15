@@ -214,11 +214,22 @@ replaceAtCaret = null;
     $(".ML__virtual-keyboard-toggle").attr("data-tooltip", "Keyboard");
 })();
 
-var grabheadings = null;
 var getSidebarMarkdown = null;
 
 // Mostly Builder Functions
 (function() {
+    function updatePreview() {
+        let iframe = document.getElementById("out-s");
+        let currentPreview = iframe.src.substring(iframe.src.lastIndexOf("/") + 1);
+        if (currentPreview == "preview") {
+            iframe.src = "/create/output-sidebar/#/preview2";
+        } else {
+            document.getElementById("out-s").src = "/create/output-sidebar/#/preview";
+        }
+    }
+
+	$("#builder").find("input").on("keyup", updatePreview);
+
     const list = document.getElementById("sidebar-flow");
     const list2 = document.getElementById("sidebar-catalog")
 
@@ -228,6 +239,9 @@ var getSidebarMarkdown = null;
         animation: 150,
         fallbackOnBody: true,
         removeCloneOnHide: true,
+        onChange: function(e) {
+            updatePreview();
+        }
     });
 
     new Sortable(list2, {
@@ -240,16 +254,20 @@ var getSidebarMarkdown = null;
         handle: ".grip",
         animation: 150,
         fallbackOnBody: true,
+        onEnd: function(e) {
+            updatePreview();
+        }
     });
 
     $("item > i.red").click(function() {
         $(this).parent().slideToggle(100, function() {
             $(this).remove();
+            updatePreview();
         });
     });
 
 	// Gets tree of values
-    grabHeadings = function() {
+    function grabHeadings() {
     	let items = [];
 
     	$("#sidebar-flow").children().each(function() {
@@ -273,6 +291,7 @@ var getSidebarMarkdown = null;
 		let courseTitle = "";
 		let startedDetails = false;
 		let startedHeadings = false;
+		let empty = true;
 
 		list.forEach(item => {
 			if (item[1] == "Course Title") {
@@ -282,28 +301,46 @@ var getSidebarMarkdown = null;
 			} else if (item[1] == "Lesson") {
 				// Lessons (last)
 				if (startedHeadings) markdown += "\t";
-				if (startedDetails) markdown += "\t"; 
-				markdown += `* [${item[0]}](/)\n`;
+				if (startedDetails) markdown += "\t";
+				markdown += `* [${item[0]}](#Sidebar-Preview)\n`;
+				empty = false;
 				
 			} else if (item[1] == "Heading") {
 				// Headings (top)
-				if (startedDetails) markdown += "\n\t</details>\n\n";
+				if (startedDetails) {
+					if (!empty) markdown += "\n";
+                    if (startedHeadings) markdown += "\t";
+                    markdown += "</details>\n\n";
+                }
 				startedDetails = false;
 				startedHeadings = true;
-				markdown += `\n* **${item[0]}**\n`;
+
+				// If there is a traling space, delete it.
+				markdown += `* **${(item[0].substr(-1) == " ") ? item[0].slice(0, -1) : item[0]}**\n`;
 
 				
 			} else if (item[1] == "Toggle") {
-				if (startedDetails) markdown += "\n\t</details>\n\n";
-				if (startedHeadings) markdown += "\n\t";
-				
+				if (startedDetails) {
+					if (!empty) markdown += "\n";
+                    if (startedHeadings) markdown += "\t";
+                    markdown += "</details>\n\n";
+                }
+				if (startedHeadings) markdown += "\t";
 				markdown += "* <details>\n";
-				markdown += "\t<summary>Conic Sections</summary>\n\n";
+
+                if (startedHeadings) markdown += "\t";
+				markdown += `\t<summary>${item[0]}</summary>\n\n`;
+
 				startedDetails = true;
+                empty = true;
 			}
 		});
 
-		if (startedDetails) markdown += "\n\t</details>\n\n";
+		if (startedDetails) {
+			if (!empty) markdown += "\n";
+            if (startedHeadings) markdown += "\t";
+            markdown += "</details>\n\n";
+        }
 		
 		return markdown;
     }

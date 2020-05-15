@@ -1,5 +1,6 @@
 #in-wrapper,
-#out {
+#out,
+#out-s {
     overflow: hidden;
     border: 3px black solid;
     margin: 1.5vw;
@@ -7,7 +8,12 @@
     height: 70vh;
 }
 
+#out-s {
+    border: 3px white solid;
+}
+
 #out,
+#out-s,
 #in {
     overflow-y: auto;
     width: 35vw;
@@ -15,8 +21,14 @@
 }
 
 .cards-container.stacked #out,
-.cards-container.stacked #in {
+.cards-container.stacked #in,
+#out-s.stacked {
     width: 70vw;
+}
+
+#sidebar-flow {
+	max-height: 60vh;
+	overflow-y: scroll;
 }
 
 #in {
@@ -144,4 +156,8 @@ item.white-b input {
 item i.red:active,
 item i.green:active {
     transform: scale(0.8);
+}
+
+#builder {
+    align-items: center;
 }

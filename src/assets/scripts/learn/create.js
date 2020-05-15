@@ -9,10 +9,13 @@
                     if (text == "") {
                         return "!> Your content will be displayed here -- just type!" + content;
                     }
+                    
                     return text + content;
                 }
+                
                 return content;
             });
         },
-        window.$docsify.plugins || []);
+        window.$docsify.plugins || []
+	);
 })();
