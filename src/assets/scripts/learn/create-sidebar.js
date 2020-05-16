@@ -1,4 +1,6 @@
 (function() {
+	if (!window.parent.document.getElementById("creator")) window.location = "/404.html";
+	
 	window.$docsify = window.$docsify || {};
 	window.$docsify.plugins = [].concat (
 		function(hook) {
