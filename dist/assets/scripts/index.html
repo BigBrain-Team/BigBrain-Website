@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Number Guessing</title>
+	<link rel="stylesheet" href="assets/styles/main.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+	body {
+		background-color: #2b3038;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-image: url("https://i.pinimg.com/originals/92/f5/65/92f5655c6a6fa55c70574bee3d64555c.jpg");
+		background-size: 100%;
+	}
+
+	pauls-dumb-button {
+		text-align: center;
+		border-radius: 50% 50%;
+		font-family: "Open Sans";
+		transition: transform 0.4s cubic-bezier(0.880, -0.090, 0.205, 1.635),
+					backdrop-filter 0.4s ease;
+		margin: 10px;
+		padding: 40px;
+		backdrop-filter: blur(30px)
+	}
+
+	pauls-dumb-button:hover {
+
+		transform: scale(1.5);
+		backdrop-filter: blur(30px)
+	}
+
+	pauls-dumb-button:active {
+		transition: transform 0.3s cubic-bezier(0.880, -0.090, 0.205, 1.635),
+			backdrop-filter 0.3s ease;
+		transform: scale(1.8);
+	}
+
+	pauls-dumb-button.white #original-icon{
+		fill: #000;
+	}
+
+	pauls-dumb-button.white {
+		background-color: white;
+	}
+	</style>
+</head>
+
+<body>
+	<pauls-dumb-button>
+		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="90" height="90" viewBox="0 0 172 172" style=" fill:#000000;">
+			<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+				<path d="M0,172v-172h172v172z" fill="none"></path>
+				<g id="original-icon" fill="#ffffff">
+					<path d="M57.33333,11.46667c-3.1648,0 -5.73333,2.56853 -5.73333,5.73333v5.73333h68.8v-5.73333c0,-3.1648 -2.56853,-5.73333 -5.73333,-5.73333zM51.6,28.66667v11.99297c0,3.39413 1.0028,6.71409 2.88906,9.54062l4.72552,7.08828c2.5112,3.76106 3.85208,8.1915 3.85208,12.72084v79.05729c0,6.33533 5.13133,11.46667 11.46667,11.46667h22.93333c6.33533,0 11.46667,-5.13133 11.46667,-11.46667v-79.05729c0,-4.52934 1.34088,-8.95404 3.85208,-12.72084l4.72552,-7.08828c1.88627,-2.8208 2.88906,-6.14649 2.88906,-9.54062v-11.99297zM86,68.8c6.33533,0 11.46667,5.13133 11.46667,11.46667v11.46667c0,6.33533 -5.13133,11.46667 -11.46667,11.46667c-6.33533,0 -11.46667,-5.13133 -11.46667,-11.46667v-11.46667c0,-6.33533 5.13133,-11.46667 11.46667,-11.46667zM86,86c-3.16643,0 -5.73333,2.5669 -5.73333,5.73333c0,3.16643 2.5669,5.73333 5.73333,5.73333c3.16643,0 5.73333,-2.5669 5.73333,-5.73333c0,-3.16643 -2.5669,-5.73333 -5.73333,-5.73333z"></path>
+				</g>
+			</g>
+		</svg>
+	</pauls-dumb-button>
+	<script>
+		document.querySelector("pauls-dumb-button")
+			.addEventListener("click", function() {
+				this.classList.toggle("white");
+			});
+	</script>
+</body>
+
+</html>
