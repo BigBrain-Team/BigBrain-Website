@@ -1,5 +1,7 @@
 # BigBrain
-*Free* Learning courses for all. Aimed towards high schoolers. 
+*Free* Learning courses for all. Aimed towards high schoolers.
+
+- We are accepting courses to host, please send me an email (nath49ers@gmail.com)
 
 ## Edit Instructions
 1. Edit `src/` directory
